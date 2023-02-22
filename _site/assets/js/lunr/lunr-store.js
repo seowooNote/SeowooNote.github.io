@@ -1,0 +1,31 @@
+var store = [{
+        "title": "HTML 기본구조",
+        "excerpt":"HTML 이란? 다양한 리소스와 연동된 정보를 확일할 때 보는 웹 문서를 만드는 언어입니다. 현재, 시간이 지남에 따라 여러 버전들이 존재하고 있습니다. HTML4 초창기 웹사이트를 구성하는 HTML을 말합니다. XHTML 웹표준을 위한 웹사이트 구조를 선언하는 HTML을 말합니다. HTML5 웹사이트의 구조를 담당하며, 문서에 제목, 문단, 표, 이미지, 동영상등을 정의하고 의미를 부여하는 언어입니다. 최근에...","categories": ["VisualStudioCode"],
+        "tags": ["HTML"],
+        "url": "/visualstudiocode/first/",
+        "teaser": null
+      },{
+        "title": "HTML Tag1",
+        "excerpt":"HTML 기본문법 태그(tag) 작성방법 &lt;태그 명령어&gt; HTML에서는 다양한 종류의 태그들을 지원하고 있습니다. 이 태그들을 통해 여러가지 웹 브라우저에서 다양한 표현들을 가능하게 합니다. 태그는 크게 두 종류로 되어있는데, 바로 일반태그와 단독태그로 되어있습니다. 일반태그(열린태그 + 닫힌태그) &lt;태그&gt; 내용 &lt;/태그&gt; ‘'는 연린태그라고 불리고, '‘는 닫힌태그라고 불립니다. 닫힌태그 &lt;태그/&gt; 일반태그에서 두개의 태그의 사용과 달리...","categories": ["VisualStudioCode"],
+        "tags": ["HTML"],
+        "url": "/visualstudiocode/second/",
+        "teaser": null
+      },{
+        "title": "HTML Tag2",
+        "excerpt":"경로 웹 브라우저상의 이미지나 동영상, 링크 주소 등과 같은 것들을 많이 보았던 적이 있을겁니다. 코딩으로 이를 구현할 때에는 이러한 것들의 경로를 지정해 주어 웹 브라우저에 구현해 낼 수 있습니다. 대표적으로 절대경로와 상태경로의 형태로 나뉘게 됩니다. 절대경로 상위폴더를 뜻하고 즉, 예를 들어 내컴퓨터 - C드라이브 - 내폴더 - img와 같은 개념으로...","categories": ["VisualStudioCode"],
+        "tags": ["HTML"],
+        "url": "/visualstudiocode/third/",
+        "teaser": null
+      },{
+        "title": "HTML Tag3",
+        "excerpt":"틀에 관련된 태그들 틀이라는 단어의 뜻은 어떠한 것에 대한 일정한 격식이나 형식을 의미합니다. HTML에서도 어떠한 틀을 나타내는 태그들이 존재합니다. &lt;figure&gt; &lt;figcaption&gt; &lt;/figcaption&gt; &lt;/figure&gt; 태그 &lt;figure&gt; &lt;figcaption&gt; figure와 figcaption은 세트 &lt;/figcaption&gt; &lt;/figure&gt; figure 태그는 설명을 표시할 요소를 묶어주는 태그이며, 이 태그 안에 들어가는 figcaption 태그는 설명글을 표시해주는 태그입니다. &lt;table&gt; &lt;/table&gt;태그 &lt;table&gt;...","categories": ["VisualStudioCode"],
+        "tags": ["HTML"],
+        "url": "/visualstudiocode/fourth/",
+        "teaser": null
+      },{
+        "title": "CSS 기본구조",
+        "excerpt":"CSS 란? HTML은 태그들을 이용해서 웹 브라우저에 표현을 하는 것이라고 한다면, CSS는 이런한 태그들의 특정 요소들을 선택하여 속성을 기호에 맞게 변경하는 역할을 합니다. HTML이 뼈대, CSS는 옷이라고 생각하면 되겠습니다. CSS 기본구조 내부 스타일 선언 &lt;!DOCTYPE html&gt; &lt;html lang=\"en\"&gt; &lt;head&gt; &lt;meta charset=\"UTF-8\"&gt; &lt;title&gt;CSS 기본구조&lt;/title&gt; &lt;style&gt; &lt;!-- CSS는 style 태그 내에서 작성...","categories": ["VisualStudioCode"],
+        "tags": ["CSS"],
+        "url": "/visualstudiocode/fifth/",
+        "teaser": null
+      }]

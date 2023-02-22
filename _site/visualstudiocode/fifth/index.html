@@ -1,0 +1,1008 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>CSS 기본구조 | SeowooNote</title>
+<meta name="description" content="CSS 란?   HTML은 태그들을 이용해서 웹 브라우저에 표현을 하는 것이라고 한다면, CSS는 이런한 태그들의 특정 요소들을 선택하여 속성을 기호에 맞게 변경하는 역할을 합니다. HTML이 뼈대, CSS는 옷이라고 생각하면 되겠습니다.     CSS 기본구조   내부 스타일 선언 &lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt;     &lt;meta charset=&quot;UTF-8&quot;&gt;     &lt;title&gt;CSS 기본구조&lt;/title&gt;     &lt;style&gt;          &lt;!-- CSS는 style 태그 내에서 작성 --&gt;         &lt;!-- 내부 스타일시트 선언 --&gt;      &lt;/style&gt; &lt;/head&gt; &lt;body&gt;     &lt;!-- HTML 관련 태그 작성 --&gt; &lt;/body&gt; &lt;/html&gt;  위의 예시의 기본구조를 살펴봅시다. 우선 body 태그 내에 있는 것은 HTML에서 웹 브라우저를 시각적으로 표현하는 공간이라는 것을 이전 자료에서 보았을 것입니다. CSS는 body 태그 내에서 작업하는 것이 아니라, head 태그 내에서 style 태그를 직접 만들어 내부에 작성을 하게 됩니다. 이러한 방법을 내부 스타일시트 선언이라고 합니다. (head 태그 내의 style태그 작성)   외부 스타일 선언 &lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt;     &lt;meta charset=&quot;UTF-8&quot;&gt;     &lt;title&gt;CSS 기본구조&lt;/title&gt;     &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;./css/style.css&quot;&gt;     &lt;!-- 외부 스타일시트 선언 --&gt; &lt;/head&gt; &lt;body&gt;      &lt;/body&gt; &lt;/html&gt;  그렇다면 외부 스타일시트 선언도 있습니다.  한 파일 내에서 모든 작업을 하는 내부 스타일시트 선언 방식과 달리 외부 스타일시트 선언은 새로운 파일(외부 css 파일, 파일명 확장자가 반드시 .css)만들어 그 파일 내에서 css 작업을 수행하고 연동시켜 사용하는 방법입니다. 연동은 위해서는 위의 예시처럼 link태그를 이용하여 해당 파일의 경로를 알맞게 설정하면 됩니다.   인라인 스타일 (Inline Style) 선언 &lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt;     &lt;meta charset=&quot;UTF-8&quot;&gt;     &lt;title&gt;CSS 기본구조&lt;/title&gt; &lt;/head&gt; &lt;body&gt;     &lt;h2 style = &quot;color : green&quot;&gt; 인라인 스타일시트 선언 &lt;/h2&gt;     &lt;!-- 인라인 스타일시트 선언 --&gt; &lt;/body&gt; &lt;/html&gt;  마지막으로는 인라인 스타일시트 선언 방법입니다. body 태그 내에 style 속성을 지정하여 사용하는 방식이며, 작업시 즉각적으로 어떤 스타일이 좋을지 확일할 때 사용합니다.  간단한 작업을 혼자 수행할 때에는 내부 스타일시트나 인라인 스타일시트를 선언해서 하는 것이 좋을 수도 있겠지만, 개발자들간의 협업이나 복잡한 작업시에는 외부 스타일시트 선언으로 작업하는 것이 수월합니다.     CSS 기본문법 (선택자)   CSS는 선택자를 통해 특정 요소들을 선택하여 스터일을 적용합니다. 선택자의 종류에 대해서 알아보기 전에 CSS 작업에 가장 많이 사용되는 div 태그에 대해 알아봅시다. &lt;div&gt; &lt;/div&gt; 태그 &lt;div&gt; 박스 태그 &lt;/div&gt;  웹 사이트의 레이아웃 구성에 주로 사용하는 태그입니다. 레이아웃 배치 시 CSS를 활용하여 스타일 적용합니다.   태그 선택자 &lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt;     &lt;meta charset=&quot;UTF-8&quot;&gt;     &lt;title&gt;태그 선택자&lt;/title&gt;     &lt;style&gt;         /* tag{속성 : 값;} */         div{속성 : 값;}     &lt;/style&gt; &lt;/head&gt; &lt;body&gt;     &lt;div&gt;  &lt;div&gt; &lt;/body&gt; &lt;/html&gt;  파일 내에 특정 태그 전체를 선택해서 스타일를 적용합니다. 위의 예시는 div 태그를 태그 선택자를 선택해서 스타일을 적용하는 예시입니다.   클래스 선택자 &lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt;     &lt;meta charset=&quot;UTF-8&quot;&gt;     &lt;title&gt;클래스 선택자&lt;/title&gt;     &lt;style&gt;         /* .name{속성 : 값;} */         .class{속성 : 값;}     &lt;/style&gt; &lt;/head&gt; &lt;body&gt;     &lt;div class = &quot;class&quot;&gt;  &lt;div&gt;     &lt;!-- div태그의 class를 &quot;class&quot; 이름으로 선언 --&gt;     &lt;!-- 단축키 : (사용하고자 하는 태그명).(태그명의 class명) --&gt;     &lt;!-- ex. div.class입력 -&gt; Enter --&gt; &lt;/body&gt; &lt;/html&gt;  클래스 선택자는 우선 body 태그 내의 나타내고 싶은 태그의 class를 선언하여 스타일을 적용합니다. 위의 예시를 보면 이해가 됩니다. 그리고 클래스 선택자는 여러개의 태그 요소들을 선택 가능합니다. 즉, 클래스 선언 이름이 중복되어도 되고, 태그들의 종류가 서로 달라도 가능합니다.   아이디 선택자 &lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt;     &lt;meta charset=&quot;UTF-8&quot;&gt;     &lt;title&gt;아이디 선택자&lt;/title&gt;     &lt;style&gt;         /* #name{속성 : 값;} */         #id{속성 : 값;}     &lt;/style&gt; &lt;/head&gt; &lt;body&gt;     &lt;div id = &quot;id&quot;&gt;  &lt;div&gt;     &lt;!-- div태그의 id를 &quot;id&quot; 이름으로 선언 --&gt;     &lt;!-- 단축키 : (사용하고자 하는 태그명).(태그명의 id명) --&gt;     &lt;!-- ex. div#id 입력 -&gt; Enter --&gt; &lt;/body&gt; &lt;/html&gt;  아이디 선택자는 body 태그 내의 나타내고 싶은 태그의 id를 선언하여 스타일을 적용합니다. 위의 예시를 보면 이해가 됩니다. 또한 아이디 선택자는 하나의 태그 요소만 선택 가능하여 다중선택 불가합니다.   전체 선택자 &lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt;     &lt;meta charset=&quot;UTF-8&quot;&gt;     &lt;title&gt;전체 선택자&lt;/title&gt;     &lt;style&gt;         /* *{속성 : 값;} */         *{속성 : 값;}     &lt;/style&gt; &lt;/head&gt; &lt;body&gt;     &lt;div&gt; 박스태그 &lt;div&gt;     &lt;ul&gt;         &lt;li&gt; ul과 li는 세트 &lt;/li&gt;     &lt;/ul&gt;     &lt;h1&gt; 글자크기 및 진하기가 h1~6 태그 중에서 제일 큰 태그  &lt;h1&gt;     &lt;!-- 전체 선택자는 모든 태그들을 선택(현재 예시에서 전체 선택자는 div, ul, li, h1 태그가 선택됨) --&gt; &lt;/body&gt; &lt;/html&gt;  전체 선택자는 문서 내의 모두 선택으로 모든 태그 요소들을 선택하여 스타일을 적용합니다. 위의 예시를 참고하면 됩니다.     클래스, 아이디 선택자 명 삽입시 규칙   앞에서 선택자의 종류에 대해 알아보았습니다. 그 중에서도 글래스, 아이디 선택자를 많이 사용할 기회가 있을겁니다. 그것들을 사용함에 앞서 클래스, 아이디 선택자 명 삽입시 규칙에 대해 알아봅시다. 1. 첫번째 글자는 무조건 영어를 입력합니다.  2. 빈공백은 인식하지 않습니다. 3. 특수문자 (_), (-)만 사용가능합니다. 4. 두 단어 연결시 (_), (-)을 사용하거나 첫번째 글자를 대문자로 삽입하여 사용합니다.     선택자 적용 우선순위   여러 선택자 종류에도 우선순위에 따라 적용순서가 달라집니다. !important -&gt; 인라인 스타일 (Inline Style) -&gt; 아이디 선택자 (#id) -&gt; 클래스 선택자 (.class) -&gt; 태그 선택자 (tag)순으로 스타일이 우선 적용됩니다.   !important &lt;head&gt;     &lt;meta charset=&quot;UTF-8&quot;&gt;     &lt;title&gt;!important&lt;/title&gt;     &lt;style&gt;         .box{             background-color: red !important;         }         .box{             width: 300px;             height: 300px;             border: 1px solid black;             background-color: blue;         }     &lt;/style&gt; &lt;/head&gt; &lt;body&gt;     &lt;div class=&quot;box&quot;&gt; &lt;/div&gt; &lt;/body&gt;  1순위인 !important는 스타일에 강제 스타일 적용시 사용을 합니다. 위의 예시처럼 최종적으로는 배경화면의 색상이 blue로 나와야 하지만, !important를 통해 red의 색깔을 강제 적용시켜주어 최종 배경색상은 red로 나옵니다.   !important &lt;head&gt;     &lt;meta charset=&quot;UTF-8&quot;&gt;     &lt;title&gt;!important&lt;/title&gt;     &lt;style&gt;         .box{             background-color: red !important;         }         .box{             width: 300px;             height: 300px;             border: 1px solid black;             background-color: blue;         }     &lt;/style&gt; &lt;/head&gt; &lt;body&gt;     &lt;div class=&quot;box&quot;&gt; &lt;/div&gt; &lt;/body&gt;  1순위인 !important는 스타일에 강제 스타일 적용시 사용을 합니다. 위의 예시처럼 최종적으로는 배경화면의 색상이 blue로 나와야 하지만, !important를 통해 red의 색깔을 강제 적용시켜주어 최종 배경색상은 red로 나옵니다.   인라인 스타일 (Inline Style) &lt;body&gt;     &lt;div class=&quot;box&quot; styl=&quot;background-color: blue&quot;&gt; &lt;/div&gt; &lt;/body&gt;  2순위는 인라인 스타일입니다.   선택자 #id     &lt;style&gt;             #box{background-color: blue;}     &lt;/style&gt;  3순위는 아이디 선택자입니다.   선택자 .class     &lt;style&gt;             .box{background-color: blue;}     &lt;/style&gt;  4순위는 클래스 선택자입니다.   선택자 tag     &lt;style&gt;             div{background-color: blue;}     &lt;/style&gt;  5순위는 태그 선택자입니다.">
+
+
+  <meta name="author" content="SeowooNote">
+  
+  <meta property="article:author" content="SeowooNote">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="SeowooNote">
+<meta property="og:title" content="CSS 기본구조">
+<meta property="og:url" content="http://localhost:4000/visualstudiocode/fifth/">
+
+
+  <meta property="og:description" content="CSS 란?   HTML은 태그들을 이용해서 웹 브라우저에 표현을 하는 것이라고 한다면, CSS는 이런한 태그들의 특정 요소들을 선택하여 속성을 기호에 맞게 변경하는 역할을 합니다. HTML이 뼈대, CSS는 옷이라고 생각하면 되겠습니다.     CSS 기본구조   내부 스타일 선언 &lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt;     &lt;meta charset=&quot;UTF-8&quot;&gt;     &lt;title&gt;CSS 기본구조&lt;/title&gt;     &lt;style&gt;          &lt;!-- CSS는 style 태그 내에서 작성 --&gt;         &lt;!-- 내부 스타일시트 선언 --&gt;      &lt;/style&gt; &lt;/head&gt; &lt;body&gt;     &lt;!-- HTML 관련 태그 작성 --&gt; &lt;/body&gt; &lt;/html&gt;  위의 예시의 기본구조를 살펴봅시다. 우선 body 태그 내에 있는 것은 HTML에서 웹 브라우저를 시각적으로 표현하는 공간이라는 것을 이전 자료에서 보았을 것입니다. CSS는 body 태그 내에서 작업하는 것이 아니라, head 태그 내에서 style 태그를 직접 만들어 내부에 작성을 하게 됩니다. 이러한 방법을 내부 스타일시트 선언이라고 합니다. (head 태그 내의 style태그 작성)   외부 스타일 선언 &lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt;     &lt;meta charset=&quot;UTF-8&quot;&gt;     &lt;title&gt;CSS 기본구조&lt;/title&gt;     &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;./css/style.css&quot;&gt;     &lt;!-- 외부 스타일시트 선언 --&gt; &lt;/head&gt; &lt;body&gt;      &lt;/body&gt; &lt;/html&gt;  그렇다면 외부 스타일시트 선언도 있습니다.  한 파일 내에서 모든 작업을 하는 내부 스타일시트 선언 방식과 달리 외부 스타일시트 선언은 새로운 파일(외부 css 파일, 파일명 확장자가 반드시 .css)만들어 그 파일 내에서 css 작업을 수행하고 연동시켜 사용하는 방법입니다. 연동은 위해서는 위의 예시처럼 link태그를 이용하여 해당 파일의 경로를 알맞게 설정하면 됩니다.   인라인 스타일 (Inline Style) 선언 &lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt;     &lt;meta charset=&quot;UTF-8&quot;&gt;     &lt;title&gt;CSS 기본구조&lt;/title&gt; &lt;/head&gt; &lt;body&gt;     &lt;h2 style = &quot;color : green&quot;&gt; 인라인 스타일시트 선언 &lt;/h2&gt;     &lt;!-- 인라인 스타일시트 선언 --&gt; &lt;/body&gt; &lt;/html&gt;  마지막으로는 인라인 스타일시트 선언 방법입니다. body 태그 내에 style 속성을 지정하여 사용하는 방식이며, 작업시 즉각적으로 어떤 스타일이 좋을지 확일할 때 사용합니다.  간단한 작업을 혼자 수행할 때에는 내부 스타일시트나 인라인 스타일시트를 선언해서 하는 것이 좋을 수도 있겠지만, 개발자들간의 협업이나 복잡한 작업시에는 외부 스타일시트 선언으로 작업하는 것이 수월합니다.     CSS 기본문법 (선택자)   CSS는 선택자를 통해 특정 요소들을 선택하여 스터일을 적용합니다. 선택자의 종류에 대해서 알아보기 전에 CSS 작업에 가장 많이 사용되는 div 태그에 대해 알아봅시다. &lt;div&gt; &lt;/div&gt; 태그 &lt;div&gt; 박스 태그 &lt;/div&gt;  웹 사이트의 레이아웃 구성에 주로 사용하는 태그입니다. 레이아웃 배치 시 CSS를 활용하여 스타일 적용합니다.   태그 선택자 &lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt;     &lt;meta charset=&quot;UTF-8&quot;&gt;     &lt;title&gt;태그 선택자&lt;/title&gt;     &lt;style&gt;         /* tag{속성 : 값;} */         div{속성 : 값;}     &lt;/style&gt; &lt;/head&gt; &lt;body&gt;     &lt;div&gt;  &lt;div&gt; &lt;/body&gt; &lt;/html&gt;  파일 내에 특정 태그 전체를 선택해서 스타일를 적용합니다. 위의 예시는 div 태그를 태그 선택자를 선택해서 스타일을 적용하는 예시입니다.   클래스 선택자 &lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt;     &lt;meta charset=&quot;UTF-8&quot;&gt;     &lt;title&gt;클래스 선택자&lt;/title&gt;     &lt;style&gt;         /* .name{속성 : 값;} */         .class{속성 : 값;}     &lt;/style&gt; &lt;/head&gt; &lt;body&gt;     &lt;div class = &quot;class&quot;&gt;  &lt;div&gt;     &lt;!-- div태그의 class를 &quot;class&quot; 이름으로 선언 --&gt;     &lt;!-- 단축키 : (사용하고자 하는 태그명).(태그명의 class명) --&gt;     &lt;!-- ex. div.class입력 -&gt; Enter --&gt; &lt;/body&gt; &lt;/html&gt;  클래스 선택자는 우선 body 태그 내의 나타내고 싶은 태그의 class를 선언하여 스타일을 적용합니다. 위의 예시를 보면 이해가 됩니다. 그리고 클래스 선택자는 여러개의 태그 요소들을 선택 가능합니다. 즉, 클래스 선언 이름이 중복되어도 되고, 태그들의 종류가 서로 달라도 가능합니다.   아이디 선택자 &lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt;     &lt;meta charset=&quot;UTF-8&quot;&gt;     &lt;title&gt;아이디 선택자&lt;/title&gt;     &lt;style&gt;         /* #name{속성 : 값;} */         #id{속성 : 값;}     &lt;/style&gt; &lt;/head&gt; &lt;body&gt;     &lt;div id = &quot;id&quot;&gt;  &lt;div&gt;     &lt;!-- div태그의 id를 &quot;id&quot; 이름으로 선언 --&gt;     &lt;!-- 단축키 : (사용하고자 하는 태그명).(태그명의 id명) --&gt;     &lt;!-- ex. div#id 입력 -&gt; Enter --&gt; &lt;/body&gt; &lt;/html&gt;  아이디 선택자는 body 태그 내의 나타내고 싶은 태그의 id를 선언하여 스타일을 적용합니다. 위의 예시를 보면 이해가 됩니다. 또한 아이디 선택자는 하나의 태그 요소만 선택 가능하여 다중선택 불가합니다.   전체 선택자 &lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt;     &lt;meta charset=&quot;UTF-8&quot;&gt;     &lt;title&gt;전체 선택자&lt;/title&gt;     &lt;style&gt;         /* *{속성 : 값;} */         *{속성 : 값;}     &lt;/style&gt; &lt;/head&gt; &lt;body&gt;     &lt;div&gt; 박스태그 &lt;div&gt;     &lt;ul&gt;         &lt;li&gt; ul과 li는 세트 &lt;/li&gt;     &lt;/ul&gt;     &lt;h1&gt; 글자크기 및 진하기가 h1~6 태그 중에서 제일 큰 태그  &lt;h1&gt;     &lt;!-- 전체 선택자는 모든 태그들을 선택(현재 예시에서 전체 선택자는 div, ul, li, h1 태그가 선택됨) --&gt; &lt;/body&gt; &lt;/html&gt;  전체 선택자는 문서 내의 모두 선택으로 모든 태그 요소들을 선택하여 스타일을 적용합니다. 위의 예시를 참고하면 됩니다.     클래스, 아이디 선택자 명 삽입시 규칙   앞에서 선택자의 종류에 대해 알아보았습니다. 그 중에서도 글래스, 아이디 선택자를 많이 사용할 기회가 있을겁니다. 그것들을 사용함에 앞서 클래스, 아이디 선택자 명 삽입시 규칙에 대해 알아봅시다. 1. 첫번째 글자는 무조건 영어를 입력합니다.  2. 빈공백은 인식하지 않습니다. 3. 특수문자 (_), (-)만 사용가능합니다. 4. 두 단어 연결시 (_), (-)을 사용하거나 첫번째 글자를 대문자로 삽입하여 사용합니다.     선택자 적용 우선순위   여러 선택자 종류에도 우선순위에 따라 적용순서가 달라집니다. !important -&gt; 인라인 스타일 (Inline Style) -&gt; 아이디 선택자 (#id) -&gt; 클래스 선택자 (.class) -&gt; 태그 선택자 (tag)순으로 스타일이 우선 적용됩니다.   !important &lt;head&gt;     &lt;meta charset=&quot;UTF-8&quot;&gt;     &lt;title&gt;!important&lt;/title&gt;     &lt;style&gt;         .box{             background-color: red !important;         }         .box{             width: 300px;             height: 300px;             border: 1px solid black;             background-color: blue;         }     &lt;/style&gt; &lt;/head&gt; &lt;body&gt;     &lt;div class=&quot;box&quot;&gt; &lt;/div&gt; &lt;/body&gt;  1순위인 !important는 스타일에 강제 스타일 적용시 사용을 합니다. 위의 예시처럼 최종적으로는 배경화면의 색상이 blue로 나와야 하지만, !important를 통해 red의 색깔을 강제 적용시켜주어 최종 배경색상은 red로 나옵니다.   !important &lt;head&gt;     &lt;meta charset=&quot;UTF-8&quot;&gt;     &lt;title&gt;!important&lt;/title&gt;     &lt;style&gt;         .box{             background-color: red !important;         }         .box{             width: 300px;             height: 300px;             border: 1px solid black;             background-color: blue;         }     &lt;/style&gt; &lt;/head&gt; &lt;body&gt;     &lt;div class=&quot;box&quot;&gt; &lt;/div&gt; &lt;/body&gt;  1순위인 !important는 스타일에 강제 스타일 적용시 사용을 합니다. 위의 예시처럼 최종적으로는 배경화면의 색상이 blue로 나와야 하지만, !important를 통해 red의 색깔을 강제 적용시켜주어 최종 배경색상은 red로 나옵니다.   인라인 스타일 (Inline Style) &lt;body&gt;     &lt;div class=&quot;box&quot; styl=&quot;background-color: blue&quot;&gt; &lt;/div&gt; &lt;/body&gt;  2순위는 인라인 스타일입니다.   선택자 #id     &lt;style&gt;             #box{background-color: blue;}     &lt;/style&gt;  3순위는 아이디 선택자입니다.   선택자 .class     &lt;style&gt;             .box{background-color: blue;}     &lt;/style&gt;  4순위는 클래스 선택자입니다.   선택자 tag     &lt;style&gt;             div{background-color: blue;}     &lt;/style&gt;  5순위는 태그 선택자입니다.">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2023-02-22T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/visualstudiocode/fifth/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Seowoo",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="SeowooNote Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          SeowooNote
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/categories/">Category</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">Tag</a>
+            </li><li class="masthead__menu-item">
+              <a href="/search/">Search</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/categories/#visualstudiocode" itemprop="item"><span itemprop="name">Visualstudiocode</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">CSS 기본구조</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">SeowooNote</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>SeowooNote’s Blog</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">South Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:dkr0210@naver.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://instagram.com/s_eow_oo" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:dkr0210@naver.com" rel="me" class="u-email">
+            <meta itemprop="email" content="dkr0210@naver.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">이메일</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="CSS 기본구조">
+    <meta itemprop="description" content="CSS 란?HTML은 태그들을 이용해서 웹 브라우저에 표현을 하는 것이라고 한다면, CSS는 이런한 태그들의 특정 요소들을 선택하여 속성을 기호에 맞게 변경하는 역할을 합니다.HTML이 뼈대, CSS는 옷이라고 생각하면 되겠습니다.CSS 기본구조내부 스타일 선언&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;CSS 기본구조&lt;/title&gt;    &lt;style&gt;        &lt;!-- CSS는 style 태그 내에서 작성 --&gt;        &lt;!-- 내부 스타일시트 선언 --&gt;    &lt;/style&gt;&lt;/head&gt;&lt;body&gt;    &lt;!-- HTML 관련 태그 작성 --&gt;&lt;/body&gt;&lt;/html&gt;위의 예시의 기본구조를 살펴봅시다.우선 body 태그 내에 있는 것은 HTML에서 웹 브라우저를 시각적으로 표현하는 공간이라는 것을 이전 자료에서 보았을 것입니다.CSS는 body 태그 내에서 작업하는 것이 아니라, head 태그 내에서 style 태그를 직접 만들어 내부에 작성을 하게 됩니다.이러한 방법을 내부 스타일시트 선언이라고 합니다. (head 태그 내의 style태그 작성)외부 스타일 선언&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;CSS 기본구조&lt;/title&gt;    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;./css/style.css&quot;&gt;    &lt;!-- 외부 스타일시트 선언 --&gt;&lt;/head&gt;&lt;body&gt;    &lt;/body&gt;&lt;/html&gt;그렇다면 외부 스타일시트 선언도 있습니다. 한 파일 내에서 모든 작업을 하는 내부 스타일시트 선언 방식과 달리 외부 스타일시트 선언은 새로운 파일(외부 css 파일, 파일명 확장자가 반드시 .css)만들어 그 파일 내에서 css 작업을 수행하고 연동시켜 사용하는 방법입니다.연동은 위해서는 위의 예시처럼 link태그를 이용하여 해당 파일의 경로를 알맞게 설정하면 됩니다.인라인 스타일 (Inline Style) 선언&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;CSS 기본구조&lt;/title&gt;&lt;/head&gt;&lt;body&gt;    &lt;h2 style = &quot;color : green&quot;&gt; 인라인 스타일시트 선언 &lt;/h2&gt;    &lt;!-- 인라인 스타일시트 선언 --&gt;&lt;/body&gt;&lt;/html&gt;마지막으로는 인라인 스타일시트 선언 방법입니다.body 태그 내에 style 속성을 지정하여 사용하는 방식이며, 작업시 즉각적으로 어떤 스타일이 좋을지 확일할 때 사용합니다.간단한 작업을 혼자 수행할 때에는 내부 스타일시트나 인라인 스타일시트를 선언해서 하는 것이 좋을 수도 있겠지만, 개발자들간의 협업이나 복잡한 작업시에는 외부 스타일시트 선언으로 작업하는 것이 수월합니다.CSS 기본문법 (선택자)CSS는 선택자를 통해 특정 요소들을 선택하여 스터일을 적용합니다.선택자의 종류에 대해서 알아보기 전에 CSS 작업에 가장 많이 사용되는 div 태그에 대해 알아봅시다.&lt;div&gt; &lt;/div&gt; 태그&lt;div&gt; 박스 태그 &lt;/div&gt;웹 사이트의 레이아웃 구성에 주로 사용하는 태그입니다.레이아웃 배치 시 CSS를 활용하여 스타일 적용합니다.태그 선택자&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;태그 선택자&lt;/title&gt;    &lt;style&gt;        /* tag{속성 : 값;} */        div{속성 : 값;}    &lt;/style&gt;&lt;/head&gt;&lt;body&gt;    &lt;div&gt;  &lt;div&gt;&lt;/body&gt;&lt;/html&gt;파일 내에 특정 태그 전체를 선택해서 스타일를 적용합니다.위의 예시는 div 태그를 태그 선택자를 선택해서 스타일을 적용하는 예시입니다.클래스 선택자&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;클래스 선택자&lt;/title&gt;    &lt;style&gt;        /* .name{속성 : 값;} */        .class{속성 : 값;}    &lt;/style&gt;&lt;/head&gt;&lt;body&gt;    &lt;div class = &quot;class&quot;&gt;  &lt;div&gt;    &lt;!-- div태그의 class를 &quot;class&quot; 이름으로 선언 --&gt;    &lt;!-- 단축키 : (사용하고자 하는 태그명).(태그명의 class명) --&gt;    &lt;!-- ex. div.class입력 -&gt; Enter --&gt;&lt;/body&gt;&lt;/html&gt;클래스 선택자는 우선 body 태그 내의 나타내고 싶은 태그의 class를 선언하여 스타일을 적용합니다.위의 예시를 보면 이해가 됩니다.그리고 클래스 선택자는 여러개의 태그 요소들을 선택 가능합니다. 즉, 클래스 선언 이름이 중복되어도 되고, 태그들의 종류가 서로 달라도 가능합니다.아이디 선택자&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;아이디 선택자&lt;/title&gt;    &lt;style&gt;        /* #name{속성 : 값;} */        #id{속성 : 값;}    &lt;/style&gt;&lt;/head&gt;&lt;body&gt;    &lt;div id = &quot;id&quot;&gt;  &lt;div&gt;    &lt;!-- div태그의 id를 &quot;id&quot; 이름으로 선언 --&gt;    &lt;!-- 단축키 : (사용하고자 하는 태그명).(태그명의 id명) --&gt;    &lt;!-- ex. div#id 입력 -&gt; Enter --&gt;&lt;/body&gt;&lt;/html&gt;아이디 선택자는 body 태그 내의 나타내고 싶은 태그의 id를 선언하여 스타일을 적용합니다.위의 예시를 보면 이해가 됩니다.또한 아이디 선택자는 하나의 태그 요소만 선택 가능하여 다중선택 불가합니다.전체 선택자&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;전체 선택자&lt;/title&gt;    &lt;style&gt;        /* *{속성 : 값;} */        *{속성 : 값;}    &lt;/style&gt;&lt;/head&gt;&lt;body&gt;    &lt;div&gt; 박스태그 &lt;div&gt;    &lt;ul&gt;        &lt;li&gt; ul과 li는 세트 &lt;/li&gt;    &lt;/ul&gt;    &lt;h1&gt; 글자크기 및 진하기가 h1~6 태그 중에서 제일 큰 태그  &lt;h1&gt;    &lt;!-- 전체 선택자는 모든 태그들을 선택(현재 예시에서 전체 선택자는 div, ul, li, h1 태그가 선택됨) --&gt;&lt;/body&gt;&lt;/html&gt;전체 선택자는 문서 내의 모두 선택으로 모든 태그 요소들을 선택하여 스타일을 적용합니다.위의 예시를 참고하면 됩니다.클래스, 아이디 선택자 명 삽입시 규칙앞에서 선택자의 종류에 대해 알아보았습니다.그 중에서도 글래스, 아이디 선택자를 많이 사용할 기회가 있을겁니다. 그것들을 사용함에 앞서 클래스, 아이디 선택자 명 삽입시 규칙에 대해 알아봅시다.1. 첫번째 글자는 무조건 영어를 입력합니다.2. 빈공백은 인식하지 않습니다.3. 특수문자 (_), (-)만 사용가능합니다.4. 두 단어 연결시 (_), (-)을 사용하거나 첫번째 글자를 대문자로 삽입하여 사용합니다.선택자 적용 우선순위여러 선택자 종류에도 우선순위에 따라 적용순서가 달라집니다.!important -&gt; 인라인 스타일 (Inline Style) -&gt; 아이디 선택자 (#id) -&gt; 클래스 선택자 (.class) -&gt; 태그 선택자 (tag)순으로 스타일이 우선 적용됩니다.!important&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;!important&lt;/title&gt;    &lt;style&gt;        .box{            background-color: red !important;        }        .box{            width: 300px;            height: 300px;            border: 1px solid black;            background-color: blue;        }    &lt;/style&gt;&lt;/head&gt;&lt;body&gt;    &lt;div class=&quot;box&quot;&gt; &lt;/div&gt;&lt;/body&gt;1순위인 !important는 스타일에 강제 스타일 적용시 사용을 합니다.위의 예시처럼 최종적으로는 배경화면의 색상이 blue로 나와야 하지만, !important를 통해 red의 색깔을 강제 적용시켜주어 최종 배경색상은 red로 나옵니다.!important&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;!important&lt;/title&gt;    &lt;style&gt;        .box{            background-color: red !important;        }        .box{            width: 300px;            height: 300px;            border: 1px solid black;            background-color: blue;        }    &lt;/style&gt;&lt;/head&gt;&lt;body&gt;    &lt;div class=&quot;box&quot;&gt; &lt;/div&gt;&lt;/body&gt;1순위인 !important는 스타일에 강제 스타일 적용시 사용을 합니다.위의 예시처럼 최종적으로는 배경화면의 색상이 blue로 나와야 하지만, !important를 통해 red의 색깔을 강제 적용시켜주어 최종 배경색상은 red로 나옵니다.인라인 스타일 (Inline Style)&lt;body&gt;    &lt;div class=&quot;box&quot; styl=&quot;background-color: blue&quot;&gt; &lt;/div&gt;&lt;/body&gt;2순위는 인라인 스타일입니다.선택자 #id    &lt;style&gt;            #box{background-color: blue;}    &lt;/style&gt;3순위는 아이디 선택자입니다.선택자 .class    &lt;style&gt;            .box{background-color: blue;}    &lt;/style&gt;4순위는 클래스 선택자입니다.선택자 tag    &lt;style&gt;            div{background-color: blue;}    &lt;/style&gt;5순위는 태그 선택자입니다.">
+    <meta itemprop="datePublished" content="2023-02-22T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/visualstudiocode/fifth/" class="u-url" itemprop="url">CSS 기본구조
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-02-22T00:00:00+09:00">February 22, 2023</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#css-란">CSS 란?</a></li><li><a href="#css-기본구조">CSS 기본구조</a><ul><li><a href="#내부-스타일-선언">내부 스타일 선언</a></li><li><a href="#외부-스타일-선언">외부 스타일 선언</a></li><li><a href="#인라인-스타일-inline-style-선언">인라인 스타일 (Inline Style) 선언</a></li></ul></li><li><a href="#css-기본문법-선택자">CSS 기본문법 (선택자)</a><ul><li><a href="#div-div-태그">&lt;div&gt; &lt;/div&gt; 태그</a></li><li><a href="#태그-선택자">태그 선택자</a></li><li><a href="#클래스-선택자">클래스 선택자</a></li><li><a href="#아이디-선택자">아이디 선택자</a></li><li><a href="#전체-선택자">전체 선택자</a></li></ul></li><li><a href="#클래스-아이디-선택자-명-삽입시-규칙">클래스, 아이디 선택자 명 삽입시 규칙</a><ul><li><a href="#1-첫번째-글자는-무조건-영어를-입력합니다">1. 첫번째 글자는 무조건 영어를 입력합니다.</a></li><li><a href="#2-빈공백은-인식하지-않습니다">2. 빈공백은 인식하지 않습니다.</a></li><li><a href="#3-특수문자-_--만-사용가능합니다">3. 특수문자 (_), (-)만 사용가능합니다.</a></li><li><a href="#4-두-단어-연결시-_--을-사용하거나-첫번째-글자를-대문자로-삽입하여-사용합니다">4. 두 단어 연결시 (_), (-)을 사용하거나 첫번째 글자를 대문자로 삽입하여 사용합니다.</a></li></ul></li><li><a href="#선택자-적용-우선순위">선택자 적용 우선순위</a><ul><li><a href="#important">!important</a></li><li><a href="#important-1">!important</a></li><li><a href="#인라인-스타일-inline-style">인라인 스타일 (Inline Style)</a></li><li><a href="#선택자-id">선택자 #id</a></li><li><a href="#선택자-class">선택자 .class</a></li><li><a href="#선택자-tag">선택자 tag</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <hr />
+<h1 id="css-란"><strong>CSS 란?</strong></h1>
+<hr />
+<p>HTML은 태그들을 이용해서 웹 브라우저에 표현을 하는 것이라고 한다면, CSS는 이런한 태그들의 특정 요소들을 선택하여 속성을 기호에 맞게 변경하는 역할을 합니다.<br />
+HTML이 뼈대, CSS는 옷이라고 생각하면 되겠습니다.
+<br /><br /></p>
+
+<hr />
+<h1 id="css-기본구조"><strong>CSS 기본구조</strong></h1>
+<hr />
+<h2 id="내부-스타일-선언"><strong>내부 스타일 선언</strong></h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>CSS 기본구조<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;style&gt;</span>
+
+        <span class="o">&lt;!</span><span class="nt">--</span> <span class="nt">CSS는</span> <span class="nt">style</span> <span class="nt">태그</span> <span class="nt">내에서</span> <span class="nt">작성</span> <span class="nt">--</span><span class="o">&gt;</span>
+        <span class="o">&lt;!</span><span class="nt">--</span> <span class="nt">내부</span> <span class="nt">스타일시트</span> <span class="nt">선언</span> <span class="nt">--</span><span class="o">&gt;</span>
+
+    <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="c">&lt;!-- HTML 관련 태그 작성 --&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<p>위의 예시의 기본구조를 살펴봅시다.<br />
+우선 body 태그 내에 있는 것은 HTML에서 웹 브라우저를 시각적으로 표현하는 공간이라는 것을 이전 자료에서 보았을 것입니다.<br />
+CSS는 body 태그 내에서 작업하는 것이 아니라, head 태그 내에서 style 태그를 직접 만들어 내부에 작성을 하게 됩니다.<br />
+이러한 방법을 내부 스타일시트 선언이라고 합니다. (head 태그 내의 style태그 작성)
+<br /><br /></p>
+
+<h2 id="외부-스타일-선언"><strong>외부 스타일 선언</strong></h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>CSS 기본구조<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">href=</span><span class="s">"./css/style.css"</span><span class="nt">&gt;</span>
+    <span class="c">&lt;!-- 외부 스타일시트 선언 --&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<p>그렇다면 외부 스타일시트 선언도 있습니다.
+<br /> 한 파일 내에서 모든 작업을 하는 내부 스타일시트 선언 방식과 달리 외부 스타일시트 선언은 새로운 파일(외부 css 파일, 파일명 확장자가 반드시 .css)만들어 그 파일 내에서 css 작업을 수행하고 연동시켜 사용하는 방법입니다.<br />
+연동은 위해서는 위의 예시처럼 link태그를 이용하여 해당 파일의 경로를 알맞게 설정하면 됩니다.
+<br /><br /></p>
+
+<h2 id="인라인-스타일-inline-style-선언"><strong>인라인 스타일 (Inline Style) 선언</strong></h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>CSS 기본구조<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h2</span> <span class="na">style = </span><span class="s">"color : green"</span><span class="nt">&gt;</span> 인라인 스타일시트 선언 <span class="nt">&lt;/h2&gt;</span>
+    <span class="c">&lt;!-- 인라인 스타일시트 선언 --&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<p>마지막으로는 인라인 스타일시트 선언 방법입니다.<br />
+body 태그 내에 style 속성을 지정하여 사용하는 방식이며, 작업시 즉각적으로 어떤 스타일이 좋을지 확일할 때 사용합니다.
+<br /><br />
+간단한 작업을 혼자 수행할 때에는 내부 스타일시트나 인라인 스타일시트를 선언해서 하는 것이 좋을 수도 있겠지만, 개발자들간의 협업이나 복잡한 작업시에는 외부 스타일시트 선언으로 작업하는 것이 수월합니다.
+<br /><br /></p>
+
+<hr />
+<h1 id="css-기본문법-선택자"><strong>CSS 기본문법 (선택자)</strong></h1>
+<hr />
+<p>CSS는 선택자를 통해 특정 요소들을 선택하여 스터일을 적용합니다.<br />
+선택자의 종류에 대해서 알아보기 전에 CSS 작업에 가장 많이 사용되는 div 태그에 대해 알아봅시다.<br /></p>
+<h2 id="div-div-태그"><strong>&lt;div&gt; &lt;/div&gt; 태그</strong></h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div&gt;</span> 박스 태그 <span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+<p>웹 사이트의 레이아웃 구성에 주로 사용하는 태그입니다.<br />
+레이아웃 배치 시 CSS를 활용하여 스타일 적용합니다.
+<br /><br /></p>
+
+<h2 id="태그-선택자"><strong>태그 선택자</strong></h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>태그 선택자<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;style&gt;</span>
+        <span class="c">/* tag{속성 : 값;} */</span>
+        <span class="nt">div</span><span class="p">{</span><span class="py">속성</span> <span class="p">:</span> <span class="n">값</span><span class="p">;}</span>
+    <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div&gt;</span>  <span class="nt">&lt;div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<p>파일 내에 특정 태그 전체를 선택해서 스타일를 적용합니다.<br />
+위의 예시는 div 태그를 태그 선택자를 선택해서 스타일을 적용하는 예시입니다.
+<br /><br /></p>
+
+<h2 id="클래스-선택자"><strong>클래스 선택자</strong></h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>클래스 선택자<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;style&gt;</span>
+        <span class="c">/* .name{속성 : 값;} */</span>
+        <span class="nc">.class</span><span class="p">{</span><span class="py">속성</span> <span class="p">:</span> <span class="n">값</span><span class="p">;}</span>
+    <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class = </span><span class="s">"class"</span><span class="nt">&gt;</span>  <span class="nt">&lt;div&gt;</span>
+    <span class="c">&lt;!-- div태그의 class를 "class" 이름으로 선언 --&gt;</span>
+    <span class="c">&lt;!-- 단축키 : (사용하고자 하는 태그명).(태그명의 class명) --&gt;</span>
+    <span class="c">&lt;!-- ex. div.class입력 -&gt; Enter --&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<p>클래스 선택자는 우선 body 태그 내의 나타내고 싶은 태그의 class를 선언하여 스타일을 적용합니다.<br />
+위의 예시를 보면 이해가 됩니다.<br />
+그리고 클래스 선택자는 여러개의 태그 요소들을 선택 가능합니다. 즉, 클래스 선언 이름이 중복되어도 되고, 태그들의 종류가 서로 달라도 가능합니다.
+<br /><br /></p>
+
+<h2 id="아이디-선택자"><strong>아이디 선택자</strong></h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>아이디 선택자<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;style&gt;</span>
+        <span class="c">/* #name{속성 : 값;} */</span>
+        <span class="nf">#id</span><span class="p">{</span><span class="py">속성</span> <span class="p">:</span> <span class="n">값</span><span class="p">;}</span>
+    <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id = </span><span class="s">"id"</span><span class="nt">&gt;</span>  <span class="nt">&lt;div&gt;</span>
+    <span class="c">&lt;!-- div태그의 id를 "id" 이름으로 선언 --&gt;</span>
+    <span class="c">&lt;!-- 단축키 : (사용하고자 하는 태그명).(태그명의 id명) --&gt;</span>
+    <span class="c">&lt;!-- ex. div#id 입력 -&gt; Enter --&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<p>아이디 선택자는 body 태그 내의 나타내고 싶은 태그의 id를 선언하여 스타일을 적용합니다.<br />
+위의 예시를 보면 이해가 됩니다.<br />
+또한 아이디 선택자는 하나의 태그 요소만 선택 가능하여 다중선택 불가합니다.
+<br /><br /></p>
+
+<h2 id="전체-선택자"><strong>전체 선택자</strong></h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>전체 선택자<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;style&gt;</span>
+        <span class="c">/* *{속성 : 값;} */</span>
+        <span class="o">*</span><span class="p">{</span><span class="py">속성</span> <span class="p">:</span> <span class="n">값</span><span class="p">;}</span>
+    <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div&gt;</span> 박스태그 <span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;ul&gt;</span>
+        <span class="nt">&lt;li&gt;</span> ul과 li는 세트 <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;h1&gt;</span> 글자크기 및 진하기가 h1~6 태그 중에서 제일 큰 태그  <span class="nt">&lt;h1&gt;</span>
+    <span class="c">&lt;!-- 전체 선택자는 모든 태그들을 선택(현재 예시에서 전체 선택자는 div, ul, li, h1 태그가 선택됨) --&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<p>전체 선택자는 문서 내의 모두 선택으로 모든 태그 요소들을 선택하여 스타일을 적용합니다.<br />
+위의 예시를 참고하면 됩니다.
+<br /><br /></p>
+
+<hr />
+<h1 id="클래스-아이디-선택자-명-삽입시-규칙"><strong>클래스, 아이디 선택자 명 삽입시 규칙</strong></h1>
+<hr />
+<p>앞에서 선택자의 종류에 대해 알아보았습니다.<br />
+그 중에서도 글래스, 아이디 선택자를 많이 사용할 기회가 있을겁니다. 그것들을 사용함에 앞서 클래스, 아이디 선택자 명 삽입시 규칙에 대해 알아봅시다.<br /><br /></p>
+<h2 id="1-첫번째-글자는-무조건-영어를-입력합니다"><strong>1. 첫번째 글자는 무조건 영어를 입력합니다.</strong></h2>
+
+<h2 id="2-빈공백은-인식하지-않습니다"><strong>2. 빈공백은 인식하지 않습니다.</strong></h2>
+<h2 id="3-특수문자-_--만-사용가능합니다"><strong>3. 특수문자 (_), (-)만 사용가능합니다.</strong></h2>
+<h2 id="4-두-단어-연결시-_--을-사용하거나-첫번째-글자를-대문자로-삽입하여-사용합니다"><strong>4. 두 단어 연결시 (_), (-)을 사용하거나 첫번째 글자를 대문자로 삽입하여 사용합니다.</strong></h2>
+<p><br /><br /></p>
+
+<hr />
+<h1 id="선택자-적용-우선순위"><strong>선택자 적용 우선순위</strong></h1>
+<hr />
+<p>여러 선택자 종류에도 우선순위에 따라 적용순서가 달라집니다.<br />
+!important -&gt; 인라인 스타일 (Inline Style) -&gt; 아이디 선택자 (#id) -&gt; 클래스 선택자 (.class) -&gt; 태그 선택자 (tag)순으로 스타일이 우선 적용됩니다.
+<br /><br /></p>
+
+<h2 id="important"><strong>!important</strong></h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>!important<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;style&gt;</span>
+        <span class="nc">.box</span><span class="p">{</span>
+            <span class="nl">background-color</span><span class="p">:</span> <span class="no">red</span> <span class="cp">!important</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="nc">.box</span><span class="p">{</span>
+            <span class="nl">width</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
+            <span class="nl">height</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
+            <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
+            <span class="nl">background-color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"box"</span><span class="nt">&gt;</span> <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</code></pre></div></div>
+<p>1순위인 !important는 스타일에 강제 스타일 적용시 사용을 합니다.<br />
+위의 예시처럼 최종적으로는 배경화면의 색상이 blue로 나와야 하지만, !important를 통해 red의 색깔을 강제 적용시켜주어 최종 배경색상은 red로 나옵니다.
+<br /><br /></p>
+
+<h2 id="important-1"><strong>!important</strong></h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>!important<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;style&gt;</span>
+        <span class="nc">.box</span><span class="p">{</span>
+            <span class="nl">background-color</span><span class="p">:</span> <span class="no">red</span> <span class="cp">!important</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="nc">.box</span><span class="p">{</span>
+            <span class="nl">width</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
+            <span class="nl">height</span><span class="p">:</span> <span class="m">300px</span><span class="p">;</span>
+            <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
+            <span class="nl">background-color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"box"</span><span class="nt">&gt;</span> <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</code></pre></div></div>
+<p>1순위인 !important는 스타일에 강제 스타일 적용시 사용을 합니다.<br />
+위의 예시처럼 최종적으로는 배경화면의 색상이 blue로 나와야 하지만, !important를 통해 red의 색깔을 강제 적용시켜주어 최종 배경색상은 red로 나옵니다.
+<br /><br /></p>
+
+<h2 id="인라인-스타일-inline-style"><strong>인라인 스타일 (Inline Style)</strong></h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"box"</span> <span class="na">styl=</span><span class="s">"background-color: blue"</span><span class="nt">&gt;</span> <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+</code></pre></div></div>
+<p>2순위는 인라인 스타일입니다.
+<br /><br /></p>
+
+<h2 id="선택자-id"><strong>선택자 #id</strong></h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;style&gt;</span>
+            <span class="nf">#box</span><span class="p">{</span><span class="nl">background-color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;}</span>
+    <span class="nt">&lt;/style&gt;</span>
+</code></pre></div></div>
+<p>3순위는 아이디 선택자입니다.
+<br /><br /></p>
+
+<h2 id="선택자-class"><strong>선택자 .class</strong></h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;style&gt;</span>
+            <span class="nc">.box</span><span class="p">{</span><span class="nl">background-color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;}</span>
+    <span class="nt">&lt;/style&gt;</span>
+</code></pre></div></div>
+<p>4순위는 클래스 선택자입니다.
+<br /><br /></p>
+
+<h2 id="선택자-tag"><strong>선택자 tag</strong></h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nt">&lt;style&gt;</span>
+            <span class="nt">div</span><span class="p">{</span><span class="nl">background-color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;}</span>
+    <span class="nt">&lt;/style&gt;</span>
+</code></pre></div></div>
+<p>5순위는 태그 선택자입니다.
+<br /><br /></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#css" class="page__taxonomy-item p-category" rel="tag">CSS</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#visualstudiocode" class="page__taxonomy-item p-category" rel="tag">VisualStudioCode</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2023-02-22T00:00:00+09:00">February 22, 2023</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=CSS+%EA%B8%B0%EB%B3%B8%EA%B5%AC%EC%A1%B0%20http%3A%2F%2Flocalhost%3A4000%2Fvisualstudiocode%2Ffifth%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fvisualstudiocode%2Ffifth%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fvisualstudiocode%2Ffifth%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/visualstudiocode/fourth/" class="pagination--pager" title="HTML Tag3
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">참고</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/visualstudiocode/fourth/" rel="permalink">HTML Tag3
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-02-21T00:00:00+09:00">February 21, 2023</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+틀에 관련된 태그들
+
+
+틀이라는 단어의 뜻은 어떠한 것에 대한 일정한 격식이나 형식을 의미합니다.
+HTML에서도 어떠한 틀을 나타내는 태그들이 존재합니다.
+
+
+&lt;figure&gt; &lt;figcaption&gt; &lt;/figcaption&gt; &lt;/figure&...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/visualstudiocode/third/" rel="permalink">HTML Tag2
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-02-20T00:00:00+09:00">February 20, 2023</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+경로
+
+
+웹 브라우저상의 이미지나 동영상, 링크 주소 등과 같은 것들을 많이 보았던 적이 있을겁니다. 코딩으로 이를 구현할 때에는 이러한 것들의 경로를 지정해 주어 웹 브라우저에 구현해 낼 수 있습니다. 대표적으로 절대경로와 상태경로의 형태로 나뉘게 됩니다.
+절대경로
+상위폴더를...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/visualstudiocode/second/" rel="permalink">HTML Tag1
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-02-20T00:00:00+09:00">February 20, 2023</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+HTML 기본문법
+
+
+태그(tag) 작성방법
+&lt;태그 명령어&gt;
+
+HTML에서는 다양한 종류의 태그들을 지원하고 있습니다.
+이 태그들을 통해 여러가지 웹 브라우저에서 다양한 표현들을 가능하게 합니다.
+태그는 크게 두 종류로 되어있는데, 바로 일반태그와 단독태그로 되어있습...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/visualstudiocode/first/" rel="permalink">HTML 기본구조
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-02-19T00:00:00+09:00">February 19, 2023</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          최대 1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+HTML 이란?
+
+
+다양한 리소스와 연동된 정보를 확일할 때 보는 웹 문서를 만드는 언어입니다.
+
+현재, 시간이 지남에 따라 여러 버전들이 존재하고 있습니다.
+
+HTML4
+초창기 웹사이트를 구성하는 HTML을 말합니다.
+
+XHTML
+웹표준을 위한 웹사이트 구조를 선언하는 HTM...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://instagram.com/s_eow_oo" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 Seowoo. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://localhost:4000/visualstudiocode/fifth/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/visualstudiocode/fifth"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://SeowooNote.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>
