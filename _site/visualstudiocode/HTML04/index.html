@@ -23,7 +23,7 @@
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="SeowooNote">
 <meta property="og:title" content="HTML Tag3">
-<meta property="og:url" content="http://localhost:4000/visualstudiocode/fourth/">
+<meta property="og:url" content="http://localhost:4000/visualstudiocode/HTML04/">
 
 
   <meta property="og:description" content="틀에 관련된 태그들   틀이라는 단어의 뜻은 어떠한 것에 대한 일정한 격식이나 형식을 의미합니다. HTML에서도 어떠한 틀을 나타내는 태그들이 존재합니다.   &lt;figure&gt; &lt;figcaption&gt; &lt;/figcaption&gt; &lt;/figure&gt; 태그 &lt;figure&gt;     &lt;figcaption&gt; figure와 figcaption은 세트 &lt;/figcaption&gt; &lt;/figure&gt;  figure 태그는 설명을 표시할 요소를 묶어주는 태그이며, 이 태그 안에 들어가는 figcaption 태그는 설명글을 표시해주는 태그입니다.   &lt;table&gt; &lt;/table&gt;태그 &lt;table&gt;     &lt;caption&gt; &lt;/caption&gt;     &lt;tr&gt;         &lt;td&gt; &lt;/td&gt;     &lt;/tr&gt; &lt;/table&gt;  table 태그는 표를 만들어 주는 태그입니다. 그렇다면 이러한 표를 구성해주는 내부 요소 대그들에 대해 알아봅시다.      &lt;caption&gt; &lt;/caption&gt;  caption 태그는 만들고자 하는 표(table 태그)의 제목을 표현해주는 태그로 제목은 표의 중앙정렬의 위치로 표시됩니다.      &lt;tr&gt;         &lt;td&gt; &lt;/td&gt;     &lt;/tr&gt;  tr과 td 태그는 세트의 구성인 태그들로 tr 태그는 한 행(줄)을 정의하고, td 태그는 각 행의 셀(칸)을 만듭니다.  이러한 table 태그 및 구성 요소 태그들을 이용하여 원하는 표를 만들 수 있습니다. 또한 table 태그의 속성들을 이용해서 세부적인 표의 속성값을 설정할 수 있습니다. width : 가로값(px 단위) height : 세로값(px 단위) border : 테두리값(px 단위) bordercolor : 테두리색상 cellpadding : 셀 내용과 셀 경계와의 거리를 지정(안쪽으로 밈) cellspacing : 셀과 셀 사이에 두께를 지정(바깥으로 밈) align : 글자 가로 정렬 valign : 글자 세로 정렬 bgcolor : 배경색상  이러한 표는 엑셀과 유사한 형태를 가지고 있다는 점을 알고 있으면 이해가 편합니다. 또한 엑셀에서와 같이 셀을 합칠 수 있습니다. 이번에는 표 내부의 셀을 합치는 방법에 대해 알아봅시다.      &lt;tr&gt;             &lt;td colspan=&quot;가로 셀을 합칠 갯수&quot;&gt;&lt;/td&gt;     &lt;/tr&gt;  td태그 내부의 colspan 속성은 가로 셀을 합치게 합니다. 해당 속성의 속성값을 숫자(가로 셀을 합칠 갯수)로 정하여 원하는 갯수로 가로 셀이 합쳐지게 됩니다.      &lt;tr&gt;             &lt;td rowspan=&quot;세로 셀을 합칠 갯수&quot;&gt;&lt;/td&gt;     &lt;/tr&gt;  td태그 내부의 rowspan 속성은 세로 셀을 합치게 합니다. 해당 속성의 속성값을 숫자(세로 셀을 합칠 갯수)로 정하여 원하는 갯수로 세로 셀이 합쳐지게 됩니다.  이러한 셀을 합치기 위해서는 규칙이 있습니다. 먼저 앞의 속성들을 원하는 바에 맞게 정확히 입력을 해야 합니다. (가로 셀을 합칠 것인지 세로 셀을 합칠 것인지 즉, colspan 속성을 사용할 것인가? rowspan 속성을 사용할 것인가?) 다음으로는 가장 먼저 만나는 td 태그에 합쳐지는 칸의 갯수를 입력하는 명령을 삽입해야 합니다. 마지막으로는 합쳐지는 칸은 삭제시킵니다.">
@@ -45,7 +45,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/visualstudiocode/fourth/">
+<link rel="canonical" href="http://localhost:4000/visualstudiocode/HTML04/">
 
 
 
@@ -65,6 +65,8 @@
 
 
 
+
+  <meta name="naver-site-verification" content="81c32b29a14e30c7b629d3e0ef457dae6fd736e6">
 
 
 <!-- end _includes/seo.html -->
@@ -307,7 +309,7 @@
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/visualstudiocode/fourth/" class="u-url" itemprop="url">HTML Tag3
+            <a href="http://localhost:4000/visualstudiocode/HTML04/" class="u-url" itemprop="url">HTML Tag3
 </a>
           </h1>
           
@@ -466,22 +468,22 @@ bgcolor : 배경색상
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=HTML+Tag3%20http%3A%2F%2Flocalhost%3A4000%2Fvisualstudiocode%2Ffourth%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=HTML+Tag3%20http%3A%2F%2Flocalhost%3A4000%2Fvisualstudiocode%2FHTML04%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fvisualstudiocode%2Ffourth%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fvisualstudiocode%2FHTML04%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fvisualstudiocode%2Ffourth%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fvisualstudiocode%2FHTML04%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/visualstudiocode/third/" class="pagination--pager" title="HTML Tag2
+      <a href="/visualstudiocode/HTML03/" class="pagination--pager" title="HTML Tag2
 ">이전</a>
     
     
-      <a href="/visualstudiocode/fifth/" class="pagination--pager" title="CSS 기본구조
+      <a href="/visualstudiocode/CSS01/" class="pagination--pager" title="CSS 기본구조
 ">다음</a>
     
   </nav>
@@ -506,7 +508,7 @@ bgcolor : 배경색상
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/visualstudiocode/fifth/" rel="permalink">CSS 기본구조
+        <a href="/visualstudiocode/CSS01/" rel="permalink">CSS 기본구조
 </a>
       
     </h2>
@@ -566,7 +568,7 @@ CSS 기본구조
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/visualstudiocode/third/" rel="permalink">HTML Tag2
+        <a href="/visualstudiocode/HTML03/" rel="permalink">HTML Tag2
 </a>
       
     </h2>
@@ -619,7 +621,7 @@ CSS 기본구조
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/visualstudiocode/second/" rel="permalink">HTML Tag1
+        <a href="/visualstudiocode/HTML02/" rel="permalink">HTML Tag1
 </a>
       
     </h2>
@@ -675,7 +677,7 @@ HTML에서는 다양한 종류의 태그들을 지원하고 있습니다.
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/visualstudiocode/first/" rel="permalink">HTML 기본구조
+        <a href="/visualstudiocode/HTML01/" rel="permalink">HTML 기본구조
 </a>
       
     </h2>
@@ -781,8 +783,8 @@ XHTML
     
   <script>
     var disqus_config = function () {
-      this.page.url = "http://localhost:4000/visualstudiocode/fourth/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/visualstudiocode/fourth"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "http://localhost:4000/visualstudiocode/HTML04/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/visualstudiocode/HTML04"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');

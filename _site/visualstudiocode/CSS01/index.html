@@ -23,7 +23,7 @@
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="SeowooNote">
 <meta property="og:title" content="CSS 기본구조">
-<meta property="og:url" content="http://localhost:4000/visualstudiocode/fifth/">
+<meta property="og:url" content="http://localhost:4000/visualstudiocode/CSS01/">
 
 
   <meta property="og:description" content="CSS 란?   HTML은 태그들을 이용해서 웹 브라우저에 표현을 하는 것이라고 한다면, CSS는 이런한 태그들의 특정 요소들을 선택하여 속성을 기호에 맞게 변경하는 역할을 합니다. HTML이 뼈대, CSS는 옷이라고 생각하면 되겠습니다.     CSS 기본구조   내부 스타일 선언 &lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt;     &lt;meta charset=&quot;UTF-8&quot;&gt;     &lt;title&gt;CSS 기본구조&lt;/title&gt;     &lt;style&gt;          &lt;!-- CSS는 style 태그 내에서 작성 --&gt;         &lt;!-- 내부 스타일시트 선언 --&gt;      &lt;/style&gt; &lt;/head&gt; &lt;body&gt;     &lt;!-- HTML 관련 태그 작성 --&gt; &lt;/body&gt; &lt;/html&gt;  위의 예시의 기본구조를 살펴봅시다. 우선 body 태그 내에 있는 것은 HTML에서 웹 브라우저를 시각적으로 표현하는 공간이라는 것을 이전 자료에서 보았을 것입니다. CSS는 body 태그 내에서 작업하는 것이 아니라, head 태그 내에서 style 태그를 직접 만들어 내부에 작성을 하게 됩니다. 이러한 방법을 내부 스타일시트 선언이라고 합니다. (head 태그 내의 style태그 작성)   외부 스타일 선언 &lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt;     &lt;meta charset=&quot;UTF-8&quot;&gt;     &lt;title&gt;CSS 기본구조&lt;/title&gt;     &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;./css/style.css&quot;&gt;     &lt;!-- 외부 스타일시트 선언 --&gt; &lt;/head&gt; &lt;body&gt;      &lt;/body&gt; &lt;/html&gt;  그렇다면 외부 스타일시트 선언도 있습니다.  한 파일 내에서 모든 작업을 하는 내부 스타일시트 선언 방식과 달리 외부 스타일시트 선언은 새로운 파일(외부 css 파일, 파일명 확장자가 반드시 .css)만들어 그 파일 내에서 css 작업을 수행하고 연동시켜 사용하는 방법입니다. 연동은 위해서는 위의 예시처럼 link태그를 이용하여 해당 파일의 경로를 알맞게 설정하면 됩니다.   인라인 스타일 (Inline Style) 선언 &lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt;     &lt;meta charset=&quot;UTF-8&quot;&gt;     &lt;title&gt;CSS 기본구조&lt;/title&gt; &lt;/head&gt; &lt;body&gt;     &lt;h2 style = &quot;color : green&quot;&gt; 인라인 스타일시트 선언 &lt;/h2&gt;     &lt;!-- 인라인 스타일시트 선언 --&gt; &lt;/body&gt; &lt;/html&gt;  마지막으로는 인라인 스타일시트 선언 방법입니다. body 태그 내에 style 속성을 지정하여 사용하는 방식이며, 작업시 즉각적으로 어떤 스타일이 좋을지 확일할 때 사용합니다.  간단한 작업을 혼자 수행할 때에는 내부 스타일시트나 인라인 스타일시트를 선언해서 하는 것이 좋을 수도 있겠지만, 개발자들간의 협업이나 복잡한 작업시에는 외부 스타일시트 선언으로 작업하는 것이 수월합니다.     CSS 기본문법 (선택자)   CSS는 선택자를 통해 특정 요소들을 선택하여 스터일을 적용합니다. 선택자의 종류에 대해서 알아보기 전에 CSS 작업에 가장 많이 사용되는 div 태그에 대해 알아봅시다. &lt;div&gt; &lt;/div&gt; 태그 &lt;div&gt; 박스 태그 &lt;/div&gt;  웹 사이트의 레이아웃 구성에 주로 사용하는 태그입니다. 레이아웃 배치 시 CSS를 활용하여 스타일 적용합니다.   태그 선택자 &lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt;     &lt;meta charset=&quot;UTF-8&quot;&gt;     &lt;title&gt;태그 선택자&lt;/title&gt;     &lt;style&gt;         /* tag{속성 : 값;} */         div{속성 : 값;}     &lt;/style&gt; &lt;/head&gt; &lt;body&gt;     &lt;div&gt;  &lt;div&gt; &lt;/body&gt; &lt;/html&gt;  파일 내에 특정 태그 전체를 선택해서 스타일를 적용합니다. 위의 예시는 div 태그를 태그 선택자를 선택해서 스타일을 적용하는 예시입니다.   클래스 선택자 &lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt;     &lt;meta charset=&quot;UTF-8&quot;&gt;     &lt;title&gt;클래스 선택자&lt;/title&gt;     &lt;style&gt;         /* .name{속성 : 값;} */         .class{속성 : 값;}     &lt;/style&gt; &lt;/head&gt; &lt;body&gt;     &lt;div class = &quot;class&quot;&gt;  &lt;div&gt;     &lt;!-- div태그의 class를 &quot;class&quot; 이름으로 선언 --&gt;     &lt;!-- 단축키 : (사용하고자 하는 태그명).(태그명의 class명) --&gt;     &lt;!-- ex. div.class입력 -&gt; Enter --&gt; &lt;/body&gt; &lt;/html&gt;  클래스 선택자는 우선 body 태그 내의 나타내고 싶은 태그의 class를 선언하여 스타일을 적용합니다. 위의 예시를 보면 이해가 됩니다. 그리고 클래스 선택자는 여러개의 태그 요소들을 선택 가능합니다. 즉, 클래스 선언 이름이 중복되어도 되고, 태그들의 종류가 서로 달라도 가능합니다.   아이디 선택자 &lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt;     &lt;meta charset=&quot;UTF-8&quot;&gt;     &lt;title&gt;아이디 선택자&lt;/title&gt;     &lt;style&gt;         /* #name{속성 : 값;} */         #id{속성 : 값;}     &lt;/style&gt; &lt;/head&gt; &lt;body&gt;     &lt;div id = &quot;id&quot;&gt;  &lt;div&gt;     &lt;!-- div태그의 id를 &quot;id&quot; 이름으로 선언 --&gt;     &lt;!-- 단축키 : (사용하고자 하는 태그명).(태그명의 id명) --&gt;     &lt;!-- ex. div#id 입력 -&gt; Enter --&gt; &lt;/body&gt; &lt;/html&gt;  아이디 선택자는 body 태그 내의 나타내고 싶은 태그의 id를 선언하여 스타일을 적용합니다. 위의 예시를 보면 이해가 됩니다. 또한 아이디 선택자는 하나의 태그 요소만 선택 가능하여 다중선택 불가합니다.   전체 선택자 &lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt;     &lt;meta charset=&quot;UTF-8&quot;&gt;     &lt;title&gt;전체 선택자&lt;/title&gt;     &lt;style&gt;         /* *{속성 : 값;} */         *{속성 : 값;}     &lt;/style&gt; &lt;/head&gt; &lt;body&gt;     &lt;div&gt; 박스태그 &lt;div&gt;     &lt;ul&gt;         &lt;li&gt; ul과 li는 세트 &lt;/li&gt;     &lt;/ul&gt;     &lt;h1&gt; 글자크기 및 진하기가 h1~6 태그 중에서 제일 큰 태그  &lt;h1&gt;     &lt;!-- 전체 선택자는 모든 태그들을 선택(현재 예시에서 전체 선택자는 div, ul, li, h1 태그가 선택됨) --&gt; &lt;/body&gt; &lt;/html&gt;  전체 선택자는 문서 내의 모두 선택으로 모든 태그 요소들을 선택하여 스타일을 적용합니다. 위의 예시를 참고하면 됩니다.     클래스, 아이디 선택자 명 삽입시 규칙   앞에서 선택자의 종류에 대해 알아보았습니다. 그 중에서도 글래스, 아이디 선택자를 많이 사용할 기회가 있을겁니다. 그것들을 사용함에 앞서 클래스, 아이디 선택자 명 삽입시 규칙에 대해 알아봅시다. 1. 첫번째 글자는 무조건 영어를 입력합니다.  2. 빈공백은 인식하지 않습니다. 3. 특수문자 (_), (-)만 사용가능합니다. 4. 두 단어 연결시 (_), (-)을 사용하거나 첫번째 글자를 대문자로 삽입하여 사용합니다.     선택자 적용 우선순위   여러 선택자 종류에도 우선순위에 따라 적용순서가 달라집니다. !important -&gt; 인라인 스타일 (Inline Style) -&gt; 아이디 선택자 (#id) -&gt; 클래스 선택자 (.class) -&gt; 태그 선택자 (tag)순으로 스타일이 우선 적용됩니다.   !important &lt;head&gt;     &lt;meta charset=&quot;UTF-8&quot;&gt;     &lt;title&gt;!important&lt;/title&gt;     &lt;style&gt;         .box{             background-color: red !important;         }         .box{             width: 300px;             height: 300px;             border: 1px solid black;             background-color: blue;         }     &lt;/style&gt; &lt;/head&gt; &lt;body&gt;     &lt;div class=&quot;box&quot;&gt; &lt;/div&gt; &lt;/body&gt;  1순위인 !important는 스타일에 강제 스타일 적용시 사용을 합니다. 위의 예시처럼 최종적으로는 배경화면의 색상이 blue로 나와야 하지만, !important를 통해 red의 색깔을 강제 적용시켜주어 최종 배경색상은 red로 나옵니다.   !important &lt;head&gt;     &lt;meta charset=&quot;UTF-8&quot;&gt;     &lt;title&gt;!important&lt;/title&gt;     &lt;style&gt;         .box{             background-color: red !important;         }         .box{             width: 300px;             height: 300px;             border: 1px solid black;             background-color: blue;         }     &lt;/style&gt; &lt;/head&gt; &lt;body&gt;     &lt;div class=&quot;box&quot;&gt; &lt;/div&gt; &lt;/body&gt;  1순위인 !important는 스타일에 강제 스타일 적용시 사용을 합니다. 위의 예시처럼 최종적으로는 배경화면의 색상이 blue로 나와야 하지만, !important를 통해 red의 색깔을 강제 적용시켜주어 최종 배경색상은 red로 나옵니다.   인라인 스타일 (Inline Style) &lt;body&gt;     &lt;div class=&quot;box&quot; styl=&quot;background-color: blue&quot;&gt; &lt;/div&gt; &lt;/body&gt;  2순위는 인라인 스타일입니다.   선택자 #id     &lt;style&gt;             #box{background-color: blue;}     &lt;/style&gt;  3순위는 아이디 선택자입니다.   선택자 .class     &lt;style&gt;             .box{background-color: blue;}     &lt;/style&gt;  4순위는 클래스 선택자입니다.   선택자 tag     &lt;style&gt;             div{background-color: blue;}     &lt;/style&gt;  5순위는 태그 선택자입니다.">
@@ -45,7 +45,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/visualstudiocode/fifth/">
+<link rel="canonical" href="http://localhost:4000/visualstudiocode/CSS01/">
 
 
 
@@ -65,6 +65,8 @@
 
 
 
+
+  <meta name="naver-site-verification" content="81c32b29a14e30c7b629d3e0ef457dae6fd736e6">
 
 
 <!-- end _includes/seo.html -->
@@ -307,7 +309,7 @@
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/visualstudiocode/fifth/" class="u-url" itemprop="url">CSS 기본구조
+            <a href="http://localhost:4000/visualstudiocode/CSS01/" class="u-url" itemprop="url">CSS 기본구조
 </a>
           </h1>
           
@@ -676,18 +678,18 @@ body 태그 내에 style 속성을 지정하여 사용하는 방식이며, 작�
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=CSS+%EA%B8%B0%EB%B3%B8%EA%B5%AC%EC%A1%B0%20http%3A%2F%2Flocalhost%3A4000%2Fvisualstudiocode%2Ffifth%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=CSS+%EA%B8%B0%EB%B3%B8%EA%B5%AC%EC%A1%B0%20http%3A%2F%2Flocalhost%3A4000%2Fvisualstudiocode%2FCSS01%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fvisualstudiocode%2Ffifth%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fvisualstudiocode%2FCSS01%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fvisualstudiocode%2Ffifth%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fvisualstudiocode%2FCSS01%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/visualstudiocode/fourth/" class="pagination--pager" title="HTML Tag3
+      <a href="/visualstudiocode/HTML04/" class="pagination--pager" title="HTML Tag3
 ">이전</a>
     
     
@@ -715,7 +717,7 @@ body 태그 내에 style 속성을 지정하여 사용하는 방식이며, 작�
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/visualstudiocode/fourth/" rel="permalink">HTML Tag3
+        <a href="/visualstudiocode/HTML04/" rel="permalink">HTML Tag3
 </a>
       
     </h2>
@@ -770,7 +772,7 @@ HTML에서도 어떠한 틀을 나타내는 태그들이 존재합니다.
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/visualstudiocode/third/" rel="permalink">HTML Tag2
+        <a href="/visualstudiocode/HTML03/" rel="permalink">HTML Tag2
 </a>
       
     </h2>
@@ -823,7 +825,7 @@ HTML에서도 어떠한 틀을 나타내는 태그들이 존재합니다.
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/visualstudiocode/second/" rel="permalink">HTML Tag1
+        <a href="/visualstudiocode/HTML02/" rel="permalink">HTML Tag1
 </a>
       
     </h2>
@@ -879,7 +881,7 @@ HTML에서는 다양한 종류의 태그들을 지원하고 있습니다.
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/visualstudiocode/first/" rel="permalink">HTML 기본구조
+        <a href="/visualstudiocode/HTML01/" rel="permalink">HTML 기본구조
 </a>
       
     </h2>
@@ -985,8 +987,8 @@ XHTML
     
   <script>
     var disqus_config = function () {
-      this.page.url = "http://localhost:4000/visualstudiocode/fifth/";  /* Replace PAGE_URL with your page's canonical URL variable */
-      this.page.identifier = "/visualstudiocode/fifth"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+      this.page.url = "http://localhost:4000/visualstudiocode/CSS01/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/visualstudiocode/CSS01"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
     };
     (function() { /* DON'T EDIT BELOW THIS LINE */
       var d = document, s = d.createElement('script');
