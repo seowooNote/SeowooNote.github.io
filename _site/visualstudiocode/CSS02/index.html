@@ -1,0 +1,1098 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="ko" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>CSS의 속성1 | SeowooNote</title>
+<meta name="description" content="텍스트 스타일 관련   border 속성   border - width &lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt;     &lt;meta charset=&quot;UTF-8&quot;&gt;     &lt;title&gt;border-width&lt;/title&gt;     &lt;style&gt;         div{             width: 10px;             height: 10px;             border-top-width: 20px;             }     &lt;/style&gt; &lt;/head&gt; &lt;body&gt;     &lt;div&gt;  &lt;/div&gt; &lt;/body&gt; &lt;/html&gt;  테두리의 두께를 조절하는 border-width 속성입니다. 위의 예시처럼, 원하는 두께만 조절도 가능합니다. border-top-width : 위쪽 테두리만 border-bottom-width : 아래쪽 테두리만 border-right-width : 오른쪽 테두리만 border-left-width : 왼쪽 테두리만">
+
+
+  <meta name="author" content="SeowooNote">
+  
+  <meta property="article:author" content="SeowooNote">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="SeowooNote">
+<meta property="og:title" content="CSS의 속성1">
+<meta property="og:url" content="http://localhost:4000/visualstudiocode/CSS02/">
+
+
+  <meta property="og:description" content="텍스트 스타일 관련   border 속성   border - width &lt;!DOCTYPE html&gt; &lt;html lang=&quot;en&quot;&gt; &lt;head&gt;     &lt;meta charset=&quot;UTF-8&quot;&gt;     &lt;title&gt;border-width&lt;/title&gt;     &lt;style&gt;         div{             width: 10px;             height: 10px;             border-top-width: 20px;             }     &lt;/style&gt; &lt;/head&gt; &lt;body&gt;     &lt;div&gt;  &lt;/div&gt; &lt;/body&gt; &lt;/html&gt;  테두리의 두께를 조절하는 border-width 속성입니다. 위의 예시처럼, 원하는 두께만 조절도 가능합니다. border-top-width : 위쪽 테두리만 border-bottom-width : 아래쪽 테두리만 border-right-width : 오른쪽 테두리만 border-left-width : 왼쪽 테두리만">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2023-03-09T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/visualstudiocode/CSS02/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "Seowoo",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+  <meta name="naver-site-verification" content="81c32b29a14e30c7b629d3e0ef457dae6fd736e6">
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="SeowooNote Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          SeowooNote
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/categories/">Category</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">Tag</a>
+            </li><li class="masthead__menu-item">
+              <a href="/search/">Search</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">토글 메뉴</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+
+
+
+<nav class="breadcrumbs">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    
+    
+    
+      
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+
+          <meta itemprop="position" content="1" />
+        </li>
+        <span class="sep">/</span>
+      
+      
+        
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a href="/categories/#visualstudiocode" itemprop="item"><span itemprop="name">Visualstudiocode</span></a>
+          <meta itemprop="position" content="2" />
+        </li>
+        <span class="sep">/</span>
+      
+    
+      
+      
+        <li class="current">CSS의 속성1</li>
+      
+    
+  </ol>
+</nav>
+
+  
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person" class="h-card">
+
+  
+
+  <div class="author__content">
+    <h3 class="author__name p-name" itemprop="name">
+      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">SeowooNote</a>
+    </h3>
+    
+      <div class="author__bio p-note" itemprop="description">
+        <p>SeowooNote’s Blog</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">팔로우</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">South Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:dkr0210@naver.com" rel="nofollow noopener noreferrer me"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span></a></li>
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://instagram.com/s_eow_oo" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:dkr0210@naver.com" rel="me" class="u-email">
+            <meta itemprop="email" content="dkr0210@naver.com" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">이메일</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="CSS의 속성1">
+    <meta itemprop="description" content="텍스트 스타일 관련border 속성border - width&lt;!DOCTYPE html&gt;&lt;html lang=&quot;en&quot;&gt;&lt;head&gt;    &lt;meta charset=&quot;UTF-8&quot;&gt;    &lt;title&gt;border-width&lt;/title&gt;    &lt;style&gt;        div{            width: 10px;            height: 10px;            border-top-width: 20px;            }    &lt;/style&gt;&lt;/head&gt;&lt;body&gt;    &lt;div&gt;  &lt;/div&gt;&lt;/body&gt;&lt;/html&gt;테두리의 두께를 조절하는 border-width 속성입니다. 위의 예시처럼, 원하는 두께만 조절도 가능합니다.border-top-width : 위쪽 테두리만border-bottom-width : 아래쪽 테두리만border-right-width : 오른쪽 테두리만border-left-width : 왼쪽 테두리만">
+    <meta itemprop="datePublished" content="2023-03-09T00:00:00+09:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="http://localhost:4000/visualstudiocode/CSS02/" class="u-url" itemprop="url">CSS의 속성1
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-03-09T00:00:00+09:00">March 9, 2023</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          4 분 소요
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right ">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
+              <ul class="toc__menu"><li><a href="#텍스트-스타일-관련">텍스트 스타일 관련</a></li><li><a href="#border-속성">border 속성</a><ul><li><a href="#border---width">border - width</a></li><li><a href="#border---style">border - style</a></li><li><a href="#border---color">border - color</a></li><li><a href="#border---radius">border - radius</a></li><li><a href="#테두리-축약형">테두리 축약형</a></li></ul></li><li><a href="#font-속성">font 속성</a><ul><li><a href="#font---size">font - size</a></li><li><a href="#font---weight">font - weight</a></li><li><a href="#font---style">font - style</a></li><li><a href="#font---family">font - family</a></li><li><a href="#color">color</a></li><li><a href="#font-축약형">font 축약형</a></li></ul></li><li><a href="#text-속성">text 속성</a><ul><li><a href="#text---decoration">text - decoration</a></li><li><a href="#text---align">text - align</a></li><li><a href="#line---height">line - height</a></li></ul></li></ul>
+
+            </nav>
+          </aside>
+        
+        <hr />
+<h1 id="텍스트-스타일-관련"><strong>텍스트 스타일 관련</strong></h1>
+<hr />
+<h1 id="border-속성"><strong>border 속성</strong></h1>
+<hr />
+<h2 id="border---width"><strong>border - width</strong></h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>border-width<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;style&gt;</span>
+        <span class="nt">div</span><span class="p">{</span>
+            <span class="nl">width</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+            <span class="nl">height</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+            <span class="nl">border-top-width</span><span class="p">:</span> <span class="m">20px</span><span class="p">;</span>
+            <span class="p">}</span>
+    <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div&gt;</span>  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<p>테두리의 두께를 조절하는 border-width 속성입니다. 위의 예시처럼, 원하는 두께만 조절도 가능합니다.<br />
+border-top-width : 위쪽 테두리만<br />
+border-bottom-width : 아래쪽 테두리만<br />
+border-right-width : 오른쪽 테두리만<br />
+border-left-width : 왼쪽 테두리만
+<br /><br /></p>
+
+<h2 id="border---style"><strong>border - style</strong></h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>border-style<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;style&gt;</span>
+        <span class="nt">div</span><span class="p">{</span>
+            <span class="nl">width</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+            <span class="nl">height</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+            <span class="nl">border-style</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+            <span class="p">}</span>
+    <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div&gt;</span>  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<p>테두리의 형태 즉, 선의 종류를 각 속성값에 따라 변경할 수 있습니다.<br />
+none : 기본값 / 나타내지 않음<br />
+solid : 일반 실전<br />
+dashed : 직선 형태의 긴 점선<br />
+dotted : 도트 형태의 점선<br />
+double : 이중선(두줄)<br />
+groove : 입체적<br />
+ridge : 테두리 창에서 튀어나온 표시<br />
+inset : 테두리 안쪽 형태로 굵게 표시<br />
+outset : 테두리 바깥쪽 형태로 굵게 표시<br />
+원하는 부분만 스타일 조절 가능합니다.<br />
+border-top-style : 위쪽 테두리만 스타일<br />
+border-bottom-style : 아래쪽 테두리만 스타일<br />
+border-right-style : 오른쪽 테두리만 스타일<br />
+border-left-style : 왼쪽 테두리만 스타일
+<br /><br /></p>
+
+<h2 id="border---color"><strong>border - color</strong></h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>border-color<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;style&gt;</span>
+        <span class="nt">div</span><span class="p">{</span>
+            <span class="nl">width</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+            <span class="nl">height</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+            <span class="nl">border-color</span><span class="p">:</span> <span class="no">black</span><span class="p">;</span>
+            <span class="p">}</span>
+    <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div&gt;</span>  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<p>테두리의 색상으로 조절합니다.<br />
+원하는 부분만 색상 조절이 가능합니다.<br />
+border-top-color : 위쪽 테두리만 색상<br />
+border-bottom-color : 아래쪽 테두리만 색상<br />
+border-right-color : 오른쪽 테두리만 색상<br />
+border-left-color : 왼쪽 테두리만 색상
+<br /><br /></p>
+
+<h2 id="border---radius"><strong>border - radius</strong></h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>border-radius<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;style&gt;</span>
+        <span class="nf">#percent</span><span class="p">{</span>
+            <span class="nl">width</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+            <span class="nl">height</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+            <span class="nl">border-radius</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="nf">#pixel</span><span class="p">{</span>
+            <span class="nl">width</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+            <span class="nl">height</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+            <span class="nl">border-radius</span><span class="p">:</span> <span class="m">5px</span><span class="p">;</span>
+            <span class="p">}</span>
+    <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"percent"</span><span class="nt">&gt;</span>  <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"pixel"</span><span class="nt">&gt;</span> <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<p>테두리 둥글기를 설정합니다.<br />
+px, % 단위로 둥글기를 설정할 수 있습니다.<br />
+정원을 만들고 싶다면고 px 단위에서는 객체값의 절반을 입력하고, % 단위에서는 50%로 설정하여 입력하면 됩니다.
+<br /><br /></p>
+
+<h2 id="테두리-축약형"><strong>테두리 축약형</strong></h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>border<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;style&gt;</span>
+        <span class="nt">div</span><span class="p">{</span>
+            <span class="nl">width</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+            <span class="nl">height</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+            <span class="nl">border</span><span class="p">:</span> <span class="m">20px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span>
+            <span class="c">/* border: 두께(width) 형태(style) 색상(color) */</span>
+            <span class="p">}</span>
+    <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div&gt;</span>  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<p>위에서 본 각각의 설정들을 축약하여 한번에 사용할 수 있습니다.<br />
+border : 두께(width) 형태(style) 색상(color); 의 형식으로 작성하면 됩니다.
+<br /><br /></p>
+
+<hr />
+<h1 id="font-속성"><strong>font 속성</strong></h1>
+<hr />
+<h2 id="font---size"><strong>font - size</strong></h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>font-size<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;style&gt;</span>
+        <span class="nt">h1</span><span class="p">{</span><span class="nl">font-size</span><span class="p">:</span> <span class="m">12px</span><span class="p">;}</span>
+        <span class="c">/* 단위 : px (절대값) */</span>
+    <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>글자<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<p>텍스트 크기를 조절할 수 있습니다.<br /> 
+단위는 px 로 조절하여 설정할 수 있습니다.
+<br /><br /></p>
+
+<h2 id="font---weight"><strong>font - weight</strong></h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>font-weight<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;style&gt;</span>
+        <span class="nt">h1</span><span class="p">{</span><span class="nl">font-weight</span><span class="p">:</span> <span class="m">900</span><span class="p">;}</span>
+        <span class="c">/* 단위 : 100 (가늘게) ~ 900 (굵게) */</span>
+    <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>글자<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<p>텍스트 굵기를 조절할 수 있습니다.<br />
+단위는 100 ~ 900 으로 숫자값이 커질수록 텍스트의 굵기가 굵어집니다.
+<br /><br /></p>
+
+<h2 id="font---style"><strong>font - style</strong></h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>font-style<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;style&gt;</span>
+        <span class="nt">h1</span><span class="p">{</span><span class="nl">font-style</span><span class="p">:</span> <span class="nb">oblique</span><span class="p">;}</span>
+    <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>글자<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<p>텍스트의 기울기를 성정할 수 있습니다.<br />
+oblique : 문자 기울임 (물리적 기울림)<br />
+italic : 기울임체 (글씨체)
+<br /><br /></p>
+
+<h2 id="font---family"><strong>font - family</strong></h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>font-family<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;style&gt;</span>
+        <span class="nt">h1</span><span class="p">{</span><span class="nl">font-family</span><span class="p">:</span> <span class="n">글꼴명</span><span class="p">;}</span>
+    <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>글자<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<p>텍스트의 폰트체를 설정할 수 있습니다.<br />
+기호에 맞는 폰트를 다운받은 뒤에 설정이 가능합니다.<br />
+한글 폰트는 외국 폰트로 적용되지 않는 점에 유의해야 합니다.
+<br /><br /></p>
+
+<h2 id="color"><strong>color</strong></h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>color<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;style&gt;</span>
+        <span class="nf">#first</span><span class="p">{</span><span class="nl">color</span><span class="p">:</span> <span class="m">#000000</span><span class="p">;}</span>
+        <span class="c">/* 16진수 표현 */</span>
+        <span class="nf">#second</span><span class="p">{</span><span class="nl">color</span><span class="p">:</span> <span class="no">black</span><span class="p">;}</span>
+        <span class="c">/* 영문법 표현 */</span>
+        <span class="nf">#third</span><span class="p">{</span><span class="nl">color</span><span class="p">:</span> <span class="nb">rgb</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span> <span class="p">,</span><span class="m">0</span><span class="p">);}</span>
+        <span class="c">/* 0 ~ 255 숫자 표현 */</span>
+        <span class="nf">#fourth</span><span class="p">{</span><span class="nl">color</span><span class="p">:</span> <span class="n">rgba</span><span class="p">(</span><span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">0</span><span class="p">,</span> <span class="m">1</span><span class="p">);}</span>
+        <span class="c">/* rgb + a 는 알파값으로 투명도를 조절 (0 투명 ~ 0.5 반투명 ~ 1 불투명) */</span>
+    <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1</span> <span class="na">id=</span><span class="s">"first"</span><span class="nt">&gt;</span>글자<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;h1</span> <span class="na">id=</span><span class="s">"second"</span><span class="nt">&gt;</span>글자<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;h1</span> <span class="na">id=</span><span class="s">"third"</span><span class="nt">&gt;</span>글자<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;h1</span> <span class="na">id=</span><span class="s">"fourth"</span><span class="nt">&gt;</span>글자<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<p>텍스트의 글씨 색상을 설정할 수 있습니다.<br />
+설정의 단위는 4가지가 있습니다.<br />
+16진수<br />
+영문법<br />
+rgb(red(빨강색), green(초록색), blue(파란색)) (0 ~ 255 숫자로 표현)<br />
+rgba(red(빨강색), green(초록색), blue(파란색), a(투명도 0 ~ 1)) (0 ~ 255 숫자로 표현)
+<br /><br /></p>
+
+<h2 id="font-축약형"><strong>font 축약형</strong></h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>font<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;style&gt;</span>
+        <span class="nt">h1</span><span class="p">{</span>
+            <span class="nl">font</span><span class="p">:</span> <span class="nb">italic</span> <span class="m">900</span> <span class="m">14px</span> <span class="p">/</span> <span class="m">20px</span> <span class="s2">'글꼴명(폰트체)'</span><span class="p">;</span>
+            <span class="c">/* font: 스타일 (font - style) 굵기 (font - weight) 크기 (font - size) / 행간 높이 (line - height) '글꼴' (font - family); */</span>
+            <span class="p">}</span>
+    <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>글자<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<p>위의 font 속성들을 한번에 축약하여 사용이 가능합니다.<br />
+font : 스타일 (font - style) 굵기 (font - weight) 크기 (font - size) / 행간 높이 (line - height) ‘글꼴’ (font - family); 의 형식으로 사용할 수 있습니다.
+<br /><br /></p>
+
+<hr />
+<h1 id="text-속성"><strong>text 속성</strong></h1>
+<hr />
+<h2 id="text---decoration"><strong>text - decoration</strong></h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>text-decoration<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;style&gt;</span>
+        <span class="nt">h1</span><span class="p">{</span><span class="nl">text-decoration</span><span class="p">:</span> <span class="nb">line-through</span><span class="p">;}</span>
+    <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>글자<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<p>텍스트를 꾸밀 수 있습니다.<br /> 
+line - through : 글자 취소선<br />
+overline : 글자 윗줄<br />
+underline : 글자 밑줄
+<br /><br /></p>
+
+<h2 id="text---align"><strong>text - align</strong></h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>text-align<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;style&gt;</span>
+        <span class="nt">h1</span><span class="p">{</span>
+            <span class="nl">width</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+            <span class="nl">height</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+            <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>글자<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<p>텍스트의 정렬을 설정할 수 있습니다.<br />
+성정단위에는 3가지가 있습니다.<br />
+left : 왼쪽 정렬<br />
+center : 중앙 정렬<br />
+right : 오른쪽 정렬
+<br /><br /></p>
+
+<h2 id="line---height"><strong>line - height</strong></h2>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html</span> <span class="na">lang=</span><span class="s">"en"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;title&gt;</span>line-height<span class="nt">&lt;/title&gt;</span>
+    <span class="nt">&lt;style&gt;</span>
+        <span class="nt">h1</span><span class="p">{</span>
+            <span class="nl">width</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+            <span class="nl">height</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+            <span class="nl">font-size</span><span class="p">:</span> <span class="m">12px</span><span class="p">;</span>
+            <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
+            <span class="nl">line-height</span><span class="p">:</span> <span class="m">100px</span><span class="p">;</span>
+            <span class="c">/* 텍스트를 도형 정중앙에 정렬 하려면 text-align: center; 와 line-height 는 해당 도형의 높이값을 입력 */</span>
+            <span class="c">/* 단위는 px */</span>
+            <span class="p">}</span>
+    <span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>글자<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<p>line - height는 행간높이를 의미합니다. 이것을 이용하여 쉽게 텍스트의 세로 정렬을 설정할 수 있습니다.<br /> 
+단위는 px 로 조절하여 설정할 수 있습니다.<br />
+텍스트를 동형 정중앙에 정렬하려면 text-align: center; 와 line-height를 해당 도형의 높이값으로 설정하면 됩니다.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> 태그: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#css" class="page__taxonomy-item p-category" rel="tag">CSS</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> 카테고리: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#visualstudiocode" class="page__taxonomy-item p-category" rel="tag">VisualStudioCode</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2023-03-09T00:00:00+09:00">March 9, 2023</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">공유하기</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=CSS%EC%9D%98+%EC%86%8D%EC%84%B11%20http%3A%2F%2Flocalhost%3A4000%2Fvisualstudiocode%2FCSS02%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fvisualstudiocode%2FCSS02%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fvisualstudiocode%2FCSS02%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/visualstudiocode/CSS01/" class="pagination--pager" title="CSS 기본구조
+">이전</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">다음</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">참고</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/visualstudiocode/CSS01/" rel="permalink">CSS 기본구조
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-02-22T00:00:00+09:00">February 22, 2023</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          4 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+CSS 란?
+
+
+HTML은 태그들을 이용해서 웹 브라우저에 표현을 하는 것이라고 한다면, CSS는 이런한 태그들의 특정 요소들을 선택하여 속성을 기호에 맞게 변경하는 역할을 합니다.
+HTML이 뼈대, CSS는 옷이라고 생각하면 되겠습니다.
+
+
+
+
+CSS 기본구조
+
+
+내부 스타일...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/visualstudiocode/HTML04/" rel="permalink">HTML Tag3
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-02-21T00:00:00+09:00">February 21, 2023</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+틀에 관련된 태그들
+
+
+틀이라는 단어의 뜻은 어떠한 것에 대한 일정한 격식이나 형식을 의미합니다.
+HTML에서도 어떠한 틀을 나타내는 태그들이 존재합니다.
+
+
+&lt;figure&gt; &lt;figcaption&gt; &lt;/figcaption&gt; &lt;/figure&...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/visualstudiocode/HTML03/" rel="permalink">HTML Tag2
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-02-20T00:00:00+09:00">February 20, 2023</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          1 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+경로
+
+
+웹 브라우저상의 이미지나 동영상, 링크 주소 등과 같은 것들을 많이 보았던 적이 있을겁니다. 코딩으로 이를 구현할 때에는 이러한 것들의 경로를 지정해 주어 웹 브라우저에 구현해 낼 수 있습니다. 대표적으로 절대경로와 상태경로의 형태로 나뉘게 됩니다.
+절대경로
+상위폴더를...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/visualstudiocode/HTML02/" rel="permalink">HTML Tag1
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2023-02-20T00:00:00+09:00">February 20, 2023</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+
+HTML 기본문법
+
+
+태그(tag) 작성방법
+&lt;태그 명령어&gt;
+
+HTML에서는 다양한 종류의 태그들을 지원하고 있습니다.
+이 태그들을 통해 여러가지 웹 브라우저에서 다양한 표현들을 가능하게 합니다.
+태그는 크게 두 종류로 되어있는데, 바로 일반태그와 단독태그로 되어있습...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>팔로우:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+          <li><a href="https://instagram.com/s_eow_oo" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> 피드</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2023 Seowoo. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://localhost:4000/visualstudiocode/CSS02/";  /* Replace PAGE_URL with your page's canonical URL variable */
+      this.page.identifier = "/visualstudiocode/CSS02"; /* Replace PAGE_IDENTIFIER with your page's unique identifier variable */
+    };
+    (function() { /* DON'T EDIT BELOW THIS LINE */
+      var d = document, s = d.createElement('script');
+      s.src = 'https://SeowooNote.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

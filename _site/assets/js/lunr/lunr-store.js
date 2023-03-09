@@ -28,4 +28,10 @@ var store = [{
         "tags": ["CSS"],
         "url": "/visualstudiocode/CSS01/",
         "teaser": null
+      },{
+        "title": "CSS의 속성1",
+        "excerpt":"텍스트 스타일 관련 border 속성 border - width &lt;!DOCTYPE html&gt; &lt;html lang=\"en\"&gt; &lt;head&gt; &lt;meta charset=\"UTF-8\"&gt; &lt;title&gt;border-width&lt;/title&gt; &lt;style&gt; div{ width: 10px; height: 10px; border-top-width: 20px; } &lt;/style&gt; &lt;/head&gt; &lt;body&gt; &lt;div&gt; &lt;/div&gt; &lt;/body&gt; &lt;/html&gt; 테두리의 두께를 조절하는 border-width 속성입니다. 위의 예시처럼, 원하는 두께만 조절도 가능합니다. border-top-width : 위쪽 테두리만 border-bottom-width : 아래쪽...","categories": ["VisualStudioCode"],
+        "tags": ["CSS"],
+        "url": "/visualstudiocode/CSS02/",
+        "teaser": null
       }]
