@@ -34,4 +34,10 @@ var store = [{
         "tags": ["CSS"],
         "url": "/visualstudiocode/CSS02/",
         "teaser": null
+      },{
+        "title": "CSS의 속성2",
+        "excerpt":"배경 스타일 관련 backgorund 속성 background - color &lt;!DOCTYPE html&gt; &lt;html lang=\"en\"&gt; &lt;head&gt; &lt;meta charset=\"UTF-8\"&gt; &lt;title&gt;background-color&lt;/title&gt; &lt;style&gt; div{ width: 10px; height: 10px; } #first{background-color: #000000;} /* 16진수 표현 */ #second{background-color: black;} /* 영문법 표현 */ #third{background-color: rgb(0, 0 ,0);} /* 0 ~ 255 숫자 표현 */ #fourth{background-color: rgba(0, 0, 0,...","categories": ["VisualStudioCode"],
+        "tags": ["CSS"],
+        "url": "/visualstudiocode/CSS03/",
+        "teaser": null
       }]
