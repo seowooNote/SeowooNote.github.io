@@ -40,4 +40,10 @@ var store = [{
         "tags": ["CSS"],
         "url": "/visualstudiocode/CSS03/",
         "teaser": null
+      },{
+        "title": "CSS의 속성3",
+        "excerpt":"여백 관련 속성 margin &lt;!DOCTYPE html&gt; &lt;html lang=\"en\"&gt; &lt;head&gt; &lt;meta charset=\"UTF-8\"&gt; &lt;title&gt;margin&lt;/title&gt; &lt;style&gt; #first{ width: 100px; height: 100px; margin: 100px 100px 100px 100px; /* margin : 상(위쪽) 우(오른쪽) 하(아래쪽) 좌(왼쪽); */ } #second{ width: 100px; height: 100px; margin: 100px 100px; /* margin : 상하(위쪽, 아래쪽) 좌우(왼쪽, 오른쪽);*/ } #third{ width:...","categories": ["VisualStudioCode"],
+        "tags": ["CSS"],
+        "url": "/visualstudiocode/CSS04/",
+        "teaser": null
       }]
