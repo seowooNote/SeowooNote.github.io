@@ -46,4 +46,10 @@ var store = [{
         "tags": ["CSS"],
         "url": "/visualstudiocode/CSS04/",
         "teaser": null
+      },{
+        "title": "CSS의 속성4",
+        "excerpt":"정렬 및 위치 설정 관련 속성 정렬은 보통 웹 브라우저 상에서 가운데에 위치하거나 특정 객체들을 순서대로 배치할때 사용이 된다고 생각하면 됩니다. 이전에 배운 margin 속성도 이에 해당되고, 그 이외의 속성들에 대해 알아봅시다. float &lt;!DOCTYPE html&gt; &lt;html lang=\"en\"&gt; &lt;head&gt; &lt;meta charset=\"UTF-8\"&gt; &lt;title&gt;float&lt;/title&gt; &lt;style&gt; #wrap{ width: 1000px; height: 300px; } .box{ float:...","categories": ["VisualStudioCode"],
+        "tags": ["CSS"],
+        "url": "/visualstudiocode/CSS05/",
+        "teaser": null
       }]
