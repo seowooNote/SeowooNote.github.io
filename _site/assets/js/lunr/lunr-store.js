@@ -52,4 +52,10 @@ var store = [{
         "tags": ["CSS"],
         "url": "/visualstudiocode/CSS05/",
         "teaser": null
+      },{
+        "title": "CSS의 속성5",
+        "excerpt":"이벤트 속성 이벤트 속성은 웹 브라우저 사용자가 어떤 행동을 했을때 다른 결과물로 표현하는 속성을 말합니다. :hover &lt;!DOCTYPE html&gt; &lt;html lang=\"en\"&gt; &lt;head&gt; &lt;meta charset=\"UTF-8\"&gt; &lt;title&gt;hover&lt;/title&gt; &lt;style&gt; #box{ width: 100px; height: 100px; border: 1px solid black; margin: 0 auto; background-color: black; } #box:hover{background-color: white;} /* 객체에 마우스를 올리면 객체가 다른 스타일로 변경...","categories": ["VisualStudioCode"],
+        "tags": ["CSS"],
+        "url": "/visualstudiocode/CSS06/",
+        "teaser": null
       }]
