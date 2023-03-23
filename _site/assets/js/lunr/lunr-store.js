@@ -58,4 +58,10 @@ var store = [{
         "tags": ["CSS"],
         "url": "/visualstudiocode/CSS06/",
         "teaser": null
+      },{
+        "title": "HTML Tag4",
+        "excerpt":"시멘틱 태그 HTML5에서 새로 추가된 태그입니다. 의미가 부여된 태그를 사용하며, 직관적으로 기능 파악이 가능한 태그 구조입니다. div 태그나 시멘틱 태그는 결과와 기능이 같지만, 기능에 맞게 사용시 관계 파악이 쉽다는 점이 있습니다. 단, 브라우저 버전에 따라 시멘틱 태그 지원여부가 결정되므로 이에 유의해서 사용해야 합니다. &lt;header&gt; &lt;/header&gt; &lt;header&gt; &lt;/header&gt; 문서 상단에 해당되는...","categories": ["VisualStudioCode"],
+        "tags": ["HTML"],
+        "url": "/visualstudiocode/HTML05/",
+        "teaser": null
       }]
