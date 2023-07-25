@@ -32,7 +32,7 @@ ___
 
 ## **백준 코딩테스트 준비 - 티어 설정**
 ![seowoonote]({{site.url}}/../../images/2023-07-25-CodingTest/solved-ac1.jpg)
-우선 백준 사이트에 회원가입을 해주고 '설정'에서 SOLVED.AC 를 이용하여 본인의 티어와 클래스를 확인하여 동기부여가 되도록 해봅시다.<br/>
+우선 백준 사이트에 회원가입을 해주고 '설정'에서 SOLVED.AC 를 이용하여 본인의 티어와 클래스를 확인하여 동기부여가 되도록 해봅시다.<br/><br/>
 ![seowoonote]({{site.url}}/../../images/2023-07-25-CodingTest/solved-ac2.jpg)
 이렇게 되면 기본적인 코딩테스트 공부 준비가 되었다고 봅니다. 이제 문제를 본격적으로 풀어봅시다. 
 <br/><br/>
@@ -59,6 +59,7 @@ public class Stage1_1 {
 ```
 그러나 결과는<br/>
 ![seowoonote]({{site.url}}/../../images/2023-07-25-CodingTest/2257-1.png)
+<br/>
 예상치 못한 오류 때문에 찾아본 결과<br/>
 ![seowoonote]({{site.url}}/../../images/2023-07-25-CodingTest/2557-2.png)
 위와 같은 오류 메세지와 추가로 구글링한 결과 백준에서 Java 언어로 답안 코드를 제출할 경우 pacakge 부분은 기입하지 않아도 되고, class 명을 Main 으로 지정해줘야 한다는 것을 알았습니다.<br/>
