@@ -31,9 +31,9 @@ ___
 <br/><br/>
 
 ## **백준 코딩테스트 준비 - 티어 설정**
-![Alt text](../assets/images/solved-ac1.jpg)
+![seowoonote]({{site.url}}/../../images/2023-07-25-CodingTest/solved-ac1.jpg)
 우선 백준 사이트에 회원가입을 해주고 '설정'에서 SOLVED.AC 를 이용하여 본인의 티어와 클래스를 확인하여 동기부여가 되도록 해봅시다.<br/>
-![Alt text](../assets/images/solved-ac2.jpg)
+![seowoonote]({{site.url}}/../../images/2023-07-25-CodingTest/solved-ac2.jpg)
 이렇게 되면 기본적인 코딩테스트 공부 준비가 되었다고 봅니다. 이제 문제를 본격적으로 풀어봅시다. 
 <br/><br/>
 
@@ -42,7 +42,7 @@ ___
 ___
 ## **2257번 Hello World**
 ___
-![Alt text](../assets/images/2557.png)
+![seowoonote]({{site.url}}/../../images/2023-07-25-CodingTest/2557.png)
 누구나 코딩 공부를 처음 시작한다면 무조건 접하는 Hello World입니다. 오랜만에 보니 참 반가웠습니다.<br/>
 망설임 없이 바로 코드를 적었습니다.
 
@@ -58,9 +58,9 @@ public class Stage1_1 {
 }
 ```
 그러나 결과는<br/>
-![Alt text](../assets/images/2257-1.png)
+![seowoonote]({{site.url}}/../../images/2023-07-25-CodingTest/2257-1.png)
 예상치 못한 오류 때문에 찾아본 결과<br/>
-![Alt text](../assets/images/2557-2.png)
+![seowoonote]({{site.url}}/../../images/2023-07-25-CodingTest/2557-2.png)
 위와 같은 오류 메세지와 추가로 구글링한 결과 백준에서 Java 언어로 답안 코드를 제출할 경우 pacakge 부분은 기입하지 않아도 되고, class 명을 Main 으로 지정해줘야 한다는 것을 알았습니다.<br/>
 그렇다면 이를 토대로 다시 코드를 작성해 보면
 
