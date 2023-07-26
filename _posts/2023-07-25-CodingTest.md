@@ -77,3 +77,40 @@ public class Main {
 이렇게 되고 다시 이 코드를 답안으로 제출하여 정답 처리가 되었습니다.<br/>
 Java 언어를 이용하여 백준 사이트 답안을 작성하실때 이점을 유의해 주시기 바랍니다.
 <br/><br/>
+
+## **1000번 A+B**
+![seowoonote]({{site.url}}/../../images/2023-07-25-CodingTest/1000.png)
+<br/><br />
+
+## **1001번 A-B**
+![seowoonote]({{site.url}}/../../images/2023-07-25-CodingTest/1001.png)
+
+## **10998번 AXB**
+![seowoonote]({{site.url}}/../../images/2023-07-25-CodingTest/10998.png)
+
+## **1008번 A/B**
+![seowoonote]({{site.url}}/../../images/2023-07-25-CodingTest/1008.png)
+
+## **10869번 사칙연산**
+![seowoonote]({{site.url}}/../../images/2023-07-25-CodingTest/10869.png)
+
+## **10926번 ??!**
+![seowoonote]({{site.url}}/../../images/2023-07-25-CodingTest/10926.png)
+
+## **18108번 1998년생인 내가 태국에서는 2541년생?!**
+![seowoonote]({{site.url}}/../../images/2023-07-25-CodingTest/18108.png)
+
+## **10430번 나머지**
+![seowoonote]({{site.url}}/../../images/2023-07-25-CodingTest/10430.png)
+
+## **2588번 곱셈**
+![seowoonote]({{site.url}}/../../images/2023-07-25-CodingTest/2588.png)
+
+## **11382번 꼬마 정민**
+![seowoonote]({{site.url}}/../../images/2023-07-25-CodingTest/11382.png)
+
+## **10171번 고양이**
+![seowoonote]({{site.url}}/../../images/2023-07-25-CodingTest/10171.png)
+
+## **10172번 개**
+![seowoonote]({{site.url}}/../../images/2023-07-25-CodingTest/10172.png)
